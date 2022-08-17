@@ -1,0 +1,39 @@
+global-styling:
+  version: 1.x
+  js:
+    js/script.js: {}
+  css:
+    theme:
+      css/style.css: {}
+
+# pagination:
+#   js:
+#     js/pagination.js: {}
+#   dependencies:
+#     - core/dukeoeso
+
+# search:
+#   js:
+#     js/search.js: {}
+#   dependencies:
+#     - core/dukeoeso
+
+# resources:
+#   js:
+#     lib/resources.js: {}
+#   dependencies:
+#     - core/dukeoeso
+
+# carousel
+# owl.carousel:
+#   js:
+#     lib/owl.js: {}
+#   dependencies:
+#     - core/dukeoeso
+
+# Lightbox
+# lity:
+#   js:
+#     lib/lity.js: {}
+#   dependencies:
+#     - core/dukeoeso

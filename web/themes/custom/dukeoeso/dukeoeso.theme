@@ -1,0 +1,91 @@
+<?php
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Component\Utility\Html as HtmlUtility;
+use Drupal\Core\Render\Markup;
+use Drupal\Component\Render\HtmlEscapedText;
+use Drupal\Core\Path;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Path\PathValidator;
+
+function _dukeoeso_paragraphs_title_placeholder($page_title) {
+  // Must go here, if you attempt to pass in $page_title from preprocess it will
+  // be cached!
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $page_title = \Drupal::service('title_resolver')
+    ->getTitle($request, $route_match->getRouteObject());
+
+  $title_array = [
+    '#theme' => 'page_title',
+    '#title' => $page_title,
+  ];
+
+  return $title_array;
+}
+
+function dukeoeso_preprocess_paragraph(&$variables) {
+  // Note: the first item in the #lazy_builder array is our callback.
+  $placeholder_title = [
+    '#lazy_builder' => ['_dukeoeso_paragraphs_title_placeholder', ['page_title']],
+    '#create_placeholder' => TRUE,
+  ];
+
+  $variables['title'] = $placeholder_title;
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dukeoeso_theme_suggestions_page_alter(&$suggestions, $variables, $hook) {
+  /**
+   * 404 template suggestion.
+   */
+  if (!is_null(Drupal::requestStack()
+    ->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()
+      ->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    switch ($status_code) {
+      case 404:
+      {
+        $suggestions[] = 'page__' . (string) $status_code;
+        break;
+      }
+      case 403:
+      {
+        $suggestions[] = 'page__403';
+        break;
+      }
+      default:
+        break;
+    }
+  }
+}
+
+function dukeoeso_preprocess_field(&$variables) {
+
+  /* ADD CLASS TO ANCHOR */
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+
+  // Merge with any classes that may have been set by other hook_preprocess_menu invocations
+  // $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['my-menu']);
+
+  if ($variables["element"]["#field_type"] == "link") {
+    //    kint($variables);
+    $linkValues = $variables["element"]["#items"][0]->getValue();
+    $linkTitle = $linkValues["title"];
+    // echo $linkTitle;
+    /*if (isset($variables["items"][0]["content"]["#url"])) {
+
+      // $uri = $variables["items"][0]["content"]["#url"]->getRequestUri();
+      //echo "Dolly".$uri;
+
+      $new_url = URL::fromUri('internal:'.$uri);
+      $variables["items"][0]["content"]["#url"] = $new_url;
+    }*/
+  }
+
+}

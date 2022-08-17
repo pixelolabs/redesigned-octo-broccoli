@@ -1,0 +1,28 @@
+.five-column-list-content-with-heading {
+    padding: 195px 0 105px;
+    background: url(../images/bg-graphic.png) no-repeat center / cover;
+    .list-block-outer {
+        margin: 60px;
+        max-width: 1850px;
+        width: calc(100% + 73px);
+        margin-left: -73px;
+    }
+    ul {
+        width: 20%;
+        padding-left: 72px;
+        li {
+            padding: 11px 0 0;
+            min-height: 71px;
+            border-top: 4px solid $color-dark-blue;
+            margin-bottom: 19px;
+            font-size: 17px;
+            font-weight: bold;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $color-blue2;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

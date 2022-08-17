@@ -1,0 +1,16 @@
+name: Dukeoeso
+description: Custom developed theme for Duke OESO
+type: theme
+core_version_requirement: ^8 || ^9
+libraries:
+  - dukeoeso/global-styling
+base theme: classy
+screenshot: fluffiness.png
+regions:
+  header: 'Header'
+  content: 'Main Content'
+  footer: 'Footer'
+  sidebar: 'Sidebar'
+  main_navigation: 'Main Navigation'
+  not_used: 'Not Used'
+  error_content: 'Error Main Content'
