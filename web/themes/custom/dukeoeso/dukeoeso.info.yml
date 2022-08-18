@@ -11,6 +11,6 @@ regions:
   content: 'Main Content'
   footer: 'Footer'
   sidebar: 'Sidebar'
-  main_navigation: 'Main Navigation'
+  
   not_used: 'Not Used'
   error_content: 'Error Main Content'
