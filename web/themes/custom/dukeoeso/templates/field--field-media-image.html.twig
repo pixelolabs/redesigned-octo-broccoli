@@ -1,0 +1,4 @@
+{% for item in items %}
+{# {{ file_url(item.content['#item'].entity.uri.value) }} #}
+<img alt="{{ item.content['#item'].alt }}" src="{{ file_url(item.content['#item'].entity.uri.value) }}" class="img-responsive" {{ attributes }} >
+{% endfor %}
