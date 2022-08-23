@@ -1,0 +1,40 @@
+.three-column-pdf-list {
+    padding: 73px 0;
+    margin-bottom: -111px;
+    h2 {
+        text-align: center;
+        color: $color-blue2;
+        width: 100%;
+        max-width: 486px;
+        margin: 0 auto;
+    }
+    ul {
+        margin-top: 67px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      li{
+        width: 24.106% ;
+        margin-right: 13.84%;
+        margin-bottom: 111px;
+       
+       
+        &:nth-child(3n)
+        {
+            margin-right: 0;
+        }
+        a{
+            max-width: 375px;
+            background: url(../images/icon-pdf.png) no-repeat top left / 54px;
+            padding-left: 78px;
+            padding-top: 6px;
+            font-size: 19px;
+            display: block;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $color-blue2;
+            min-height: 63px;
+        }
+      }
+    }
+}

@@ -4,6 +4,26 @@
     margin: 0 auto;
     position: relative;
     
+    .vertical-text{
+       
+        padding: 4px 30px 6px;
+        font-size: 17px;
+        line-height: normal;
+        letter-spacing: normal;
+        font-weight: bold;
+        border-radius: 16.5px;
+        background: #64528e;
+        color: $color-white;
+        transform: rotate(90deg);
+        display: inline-block;
+        position: absolute;
+        right: -24px;
+        bottom: 276px;
+        @include MQ(MQ-980) {
+          
+            display: none;
+        }
+    }
     .slider{
         overflow: hidden;
         height: 1023px !important;
@@ -16,11 +36,9 @@
         }
     }
     @include MQ(MQ-980) {
-        padding-right: 50px;
-    }
-    @include MQ(MQ-768) {
         padding-right: 0px;
     }
+   
   
     .swiper-button-prev-hero-banner,.swiper-button-next-hero-banner{
         width: 55.5px;
@@ -54,6 +72,9 @@
         flex-direction: column;
         bottom: 0 !important;
         transform: none !important;
+        @include MQ(MQ-980) {
+            bottom: 90px !important;
+        }
         .swiper-pagination-bullet{
             width: 11px !important;
             height: 11px !important;
@@ -63,25 +84,23 @@
             &:last-child{
                 margin: 0px !important;
             }
-            @include MQ(MQ-768) {
+            @include MQ(MQ-980) {
                 background: $color-blue !important;
                 opacity: 1;
+
             }
             &.swiper-pagination-bullet-active{
                 opacity: 1;
-                @include MQ(MQ-768) {
+                @include MQ(MQ-980) {
                     background: $color-dark-blue !important;
                 }
             }
             
         } 
         @include MQ(MQ-980) {
-            bottom: 50px !important;
-            right: 25px !important;
-        }
-        @include MQ(MQ-768) {
             right: 20px !important;
         }
+       
        
     }
 

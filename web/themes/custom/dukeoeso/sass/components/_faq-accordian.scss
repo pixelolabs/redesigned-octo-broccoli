@@ -1,0 +1,74 @@
+.faq-accordian{
+    padding: 162px 0 307px;
+    h2 {
+        text-align: center;
+        color: $color-blue2;
+        margin-bottom: 32px;
+      
+    }
+.container-825{
+> ul{
+>li{
+    margin-bottom: 2px;
+    h6{
+        padding: 24px 65px 18px 32px;
+        color: $color-white;
+        background: url(../images/Icon-plus-white.png) no-repeat top 24px right 35px / 24px $color-blue2;
+       
+    }
+    &.active{
+        margin-bottom: 0px;
+        h6{
+           
+            color: $color-blue2;
+            background: url(../images/Icon-minus-blue.png) no-repeat top 34px right 35px / 24px $color-white;
+        
+        }
+    }
+    .content{
+       
+        background-color: rgba(0, 83, 153, 0.05);
+        display: none;
+        padding: 28px 75px 28px 66px;
+        border-top: 4px solid $color-blue2;
+        border-bottom: 4px solid $color-blue2;
+        *{
+            font-size: 19px;
+            line-height: normal;
+            letter-spacing: normal;
+color: $color-blue2;        
+}
+        
+        ul {
+            margin-top: 9px;
+            li {
+                font-size: 19px;
+                line-height: 1.68;
+                letter-spacing: normal;
+                list-style: none;
+                padding-left: 24px;
+                position: relative;
+                &::before {
+                    width: 8px;
+                    height: 8px;
+                    content: "";
+                    background: $color-blue2;
+                    position: absolute;
+                    left: 0px;
+                    top: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &.active{
+        .content{
+            display: block;
+        }
+    }
+}
+}
+}
+   
+}
