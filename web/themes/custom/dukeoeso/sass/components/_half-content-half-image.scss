@@ -1,0 +1,19 @@
+.half-content-half-image{
+    .outer{
+        width: calc(100% + 154px);
+        display: flex;
+        
+    }
+    .image-section{
+        width: 55.61%;
+        position: relative;
+       
+        img{
+            @include img-object-cover;
+        }
+    }
+    .content{
+        width: 44.39%;
+        padding-right: 33px;
+    }
+}
