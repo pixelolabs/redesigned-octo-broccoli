@@ -1,73 +1,125 @@
-.three-column-image-content-section{
+.three-column-image-content-section {
     padding: 117px 0 253px;
     position: relative;
-    &::before{
-        height: 100%;
-width: 100%;
-position: absolute;
-content: '';
-left: 0px;
-top: 0;
-z-index: 1;
-clip-path: polygon(0 0, 94% 30%, 100% 90%, 0 100%);
-background: $color-light-black;
+    @include MQ(MQ-768) {
+        background: $color-light-black;
+        padding: 60px 0;
     }
-    ul{
+    &::before {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        content: '';
+        left: 0px;
+        top: 0;
+        z-index: 1;
+        clip-path: polygon(0 0, 94% 30%, 100% 77%, 0 100%);
+        background: $color-light-black;
+        @include MQ(MQ-1550) {
+            clip-path: polygon(0 0, 97% 30%, 100% 77%, 0 100%);
+        }
+        @include MQ(MQ-1280) {
+            clip-path: polygon(0 0, 97% 20%, 100% 77%, 0 100%);
+        }
+        @include MQ(MQ-768) {
+          display: none;
+        }
+    }
+    ul {
         position: relative;
         z-index: 3;
         max-width: 1818px;
         width: calc(100% + 93px);
         margin-left: -93px;
-        li{
+        @include MQ(MQ-1280) {
+            width: calc(100% + 50px);
+            margin-left: -50px;
+        }
+        @include MQ(MQ-768) {
+            width: 100%;
+            margin-left: 0px;
+        }
+        li {
             width: 33.333%;
             padding-left: 93px;
-            .image-section{
+            @include MQ(MQ-1280) {
+                padding-left: 50px;
+            }
+            @include MQ(MQ-768) {
+                width: 100%;
+                padding-left: 0;
+                margin-bottom: 50px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .image-section {
                 width: 100%;
                 position: relative;
-                height: 480px;
+                max-height: 480px;
+                height: 25vw;
                 border-bottom: 2px solid $color-white;
                 margin-bottom: 42px;
-                &::before{
+                @include MQ(MQ-1280) {
+                    height: calc(25vw + 43px);
+                 }
+                @include MQ(MQ-768) {
+                    height: 70vw;
+                }
+                &::before {
                     position: absolute;
                     content: '';
                     height: 4px;
                     width: calc(100% - 90px);
                     left: 45px;
                     bottom: 0;
-                    background:$color-white;
+                    background: $color-white;
                     z-index: 3;
                 }
-                img{
+                img {
                     @include img-object-cover;
                 }
             }
-            .content{
+            .content {
                 padding: 16px 70px 50px;
                 position: relative;
-                p,h2{
+                @include MQ(MQ-1440) {
+                    padding: 16px 0px 50px;
+                }
+                p,
+                h2 {
                     color: $color-faded-grey;
                 }
-                h2{
+                h2 {
                     margin-bottom: 23px;
                 }
-                p{a{
-                    color: $color-yellow;
-                    font-weight: bold;
+                p {
+                    a {
+                        color: $color-yellow;
+                        font-weight: bold;
+                    }
                 }
-            }
-            .btn--primary{
-                margin-top: 49px;
-            }
-                &::before,&::after{
-height: 2px;
-width: 28px;
-position: absolute;
-content: '';
-left: 70px;
-top: 0;
-background: $color-green;
+                .btn--primary {
+                    margin-top: 49px;
+                    @include MQ(MQ-980) {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
                 }
-                &::after{
+                &::before,
+                &::after {
+                    height: 2px;
+                    width: 28px;
+                    position: absolute;
+                    content: '';
+                    left: 70px;
+                    top: 0;
+                    background: $color-green;
+                    @include MQ(MQ-1440) {
+                        left: 0px;
+                    }
+                }
+                &::after {
                     top: auto;
                     bottom: 0;
                 }

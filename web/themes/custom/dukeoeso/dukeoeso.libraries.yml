@@ -1,7 +1,7 @@
 global-styling:
   version: 1.x
   js:
-    js/script.js: {}
+    js/main.js: {}
   css:
     theme:
       css/style.css: {}

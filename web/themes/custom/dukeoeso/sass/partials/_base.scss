@@ -137,7 +137,9 @@ font-weight: 800;
 line-height: normal;
 letter-spacing: normal;
 text-transform:capitalize;
-
+@include MQ(MQ-480) {
+  font-size: 40px;
+}
 }
 
 h2,
@@ -146,7 +148,9 @@ h2,
   font-size: 32px;
   line-height: normal;
   letter-spacing:normal;
-
+  @include MQ(MQ-480) {
+    font-size: 28px;
+  }
 
 }
 
@@ -156,6 +160,9 @@ h3,
   font-size: 30px;
   line-height: 1;
   letter-spacing:normal;
+  @include MQ(MQ-480) {
+    font-size: 24px;
+  }
  
 }
 
@@ -165,6 +172,9 @@ h4,
   font-weight: bold;
   letter-spacing:normal;
   line-height: 1.33;
+  @include MQ(MQ-480) {
+    font-size: 22px;
+  }
 }
 
 h5,
@@ -173,6 +183,9 @@ h5,
   font-weight: bold;
   line-height: 1.25;
   letter-spacing: normal;
+  @include MQ(MQ-480) {
+    font-size: 20px;
+  }
 }
 
 h6 {
@@ -180,6 +193,9 @@ h6 {
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: normal;
+  @include MQ(MQ-480) {
+    font-size: 18px;
+  }
 }
 
 /****** BUTTONS ******/
@@ -396,8 +412,38 @@ button {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 30px;
+  @include MQ(MQ-768) {
+    padding: 0 20px;
+  }
+}
+.container-1260 {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @include MQ(MQ-768) {
+    padding: 0 20px;
+  }
 }
 
+.container-1805 {
+  width: 100%;
+  max-width: 1805px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @include MQ(MQ-768) {
+    padding: 0 20px;
+  }
+}
+.container-1428 {
+  width: 100%;
+  max-width: 1428px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @include MQ(MQ-768) {
+    padding: 0 20px;
+  }
+}
 .container-1440 {
   width: 100%;
   max-width: 1440px;

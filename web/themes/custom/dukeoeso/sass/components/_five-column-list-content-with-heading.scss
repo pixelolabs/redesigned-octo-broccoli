@@ -1,16 +1,52 @@
 .five-column-list-content-with-heading {
-    padding: 195px 0 105px;
+    padding: 137px 0 105px;
     background: url(../images/bg-graphic.png) no-repeat center / cover;
+    @include MQ(MQ-768) {
+        padding: 60px 0;
+    }
     .list-block-outer {
-        margin: 60px;
-        max-width: 1850px;
-        width: calc(100% + 73px);
-        margin-left: -73px;
+        margin-top: 60px;
+       
+       
     }
     ul {
-        width: 20%;
-        padding-left: 72px;
+        width: 100%;
+        max-width: 1850px;
+        .views-element-container{
+
+        width: calc(100% + 73px);
+        margin-left: -73px;
+        display: flex;
+        flex-wrap: wrap;
+        @include MQ(MQ-1280) {
+            width: calc(100% + 40px);
+            margin-left: -40px;
+        }
+        @include MQ(MQ-480) {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
         li {
+        width: calc(20% - 73px);
+        margin-left: 73px;
+        @include MQ(MQ-1280) {
+            width: calc(20% - 40px);
+            margin-left: 40px;
+        }
+        @include MQ(MQ-980) {
+          
+            width: calc(33.333% - 40px);
+        }
+        @include MQ(MQ-768) {
+            width:50%;
+            width: calc(50% - 40px);
+        }
+        @include MQ(MQ-480) {
+            width:100%;
+            margin-left: 0px;
+        }
+      
             padding: 11px 0 0;
             min-height: 71px;
             border-top: 4px solid $color-dark-blue;

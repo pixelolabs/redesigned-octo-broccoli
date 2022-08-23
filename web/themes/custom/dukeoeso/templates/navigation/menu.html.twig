@@ -35,13 +35,13 @@
 				{# Do nothing #}
 			{% endif %}
 			{% for item in items %}
-				<li{{item.attributes}}>
+				<li{{item.attributes}} class=" {% if item.below %}
+                  has-sub
+                  {% endif %}">
 					{% if menu_level == 0 %}
 						<div class="menu-wrapper">
-							<a class="primary-item
-                  {% if item.below %}
-                  has-sub
-                  {% endif %}
+							<a class="primary-item"
+                 
                   ">
 								{{item.title}}
 							</a>

@@ -8,6 +8,7 @@ base theme: classy
 screenshot: fluffiness.png
 regions:
   header: 'Header'
+  navigation: 'Navigation'
   content: 'Main Content'
   footer: 'Footer'
   sidebar: 'Sidebar'

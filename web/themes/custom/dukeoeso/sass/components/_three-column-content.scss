@@ -1,0 +1,49 @@
+.three-column-content{
+    
+   padding-right: 110px;
+   @include MQ(MQ-980) {
+    padding-right: 50px;
+   }
+   @include MQ(MQ-768) {
+    padding-right: 0px;
+   }
+   ul{
+    
+    background: $color-white;
+    margin-top: -40px;
+    padding: 16px 20px;
+
+    z-index: 1;
+    position: relative;
+    li{
+        width: calc(33.333% - 55px);
+        margin-right: 82.5px;
+        &:last-child{
+            margin-right:0;
+        }
+        @include MQ(MQ-980) {
+            width: calc(33.333% - 40px);
+            margin-right: 60px;
+        }
+        @include MQ(MQ-768) {
+            width: 100%;
+            margin: 0px;
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        p,b{
+            color: $color-green;
+            font-size: 19px;
+            letter-spacing: normal;
+            line-height: 1.21;
+        }
+        b{
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
+   }
+}

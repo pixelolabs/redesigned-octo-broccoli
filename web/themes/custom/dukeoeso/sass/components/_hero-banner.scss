@@ -1,0 +1,158 @@
+.hero-banner-slider {
+    padding-right: 110px;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    
+    .slider{
+        overflow: hidden;
+        height: 1023px !important;
+        @include MQ(MQ-980) {
+            height: 800px;
+        }
+        @include MQ(MQ-768) {
+            min-height: 700px !important;
+            height: auto;
+        }
+    }
+    @include MQ(MQ-980) {
+        padding-right: 50px;
+    }
+    @include MQ(MQ-768) {
+        padding-right: 0px;
+    }
+  
+    .swiper-button-prev-hero-banner,.swiper-button-next-hero-banner{
+        width: 55.5px;
+        height: 100px;
+        background: $color-lignt-blue;
+        background: url(../images/Icon-arrow-down.png) no-repeat center top 27px / 23.5px  $color-lignt-blue;
+        &::after{
+            display: none;
+        }
+        right: 55px !important;
+        top: 303px !important;
+        left: auto !important;
+        border-bottom-right-radius: 50px;
+        @include MQ(MQ-980) {
+            display: none;
+        }
+    }
+    .swiper-button-prev-hero-banner{
+        top: 202px !important;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 0px;
+        background: url(../images/Icon-arrow-up.png) no-repeat center top 44px / 23.5px  $color-lignt-blue;
+    }
+   
+    .swiper-pagination{
+        right: 73px !important;
+        left: auto !important;
+        top: auto !important;
+        display: flex;
+        width: 11px !important;
+        flex-direction: column;
+        bottom: 0 !important;
+        transform: none !important;
+        .swiper-pagination-bullet{
+            width: 11px !important;
+            height: 11px !important;
+            border-radius: 0px !important;
+            margin: 0 0 20px !important;
+            background: $color-blue !important;
+            &:last-child{
+                margin: 0px !important;
+            }
+            @include MQ(MQ-768) {
+                background: $color-blue !important;
+                opacity: 1;
+            }
+            &.swiper-pagination-bullet-active{
+                opacity: 1;
+                @include MQ(MQ-768) {
+                    background: $color-dark-blue !important;
+                }
+            }
+            
+        } 
+        @include MQ(MQ-980) {
+            bottom: 50px !important;
+            right: 25px !important;
+        }
+        @include MQ(MQ-768) {
+            right: 20px !important;
+        }
+       
+    }
+
+    .slide {
+        height: 1023px !important;
+        @include MQ(MQ-980) {
+            height: 800px;
+        }
+        @include MQ(MQ-768) {
+            min-height: 700px !important;
+            height: auto;
+        }
+       .container-1920{
+           display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: flex-end;
+            position: relative;
+            padding: 90px;
+            @include MQ(MQ-768) {
+                padding: 40px 40px 90px;
+            }
+        }
+        .image-section {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            img {
+                @include img-object-cover
+            }
+            &::before {
+                content: '';
+                background-color: rgba(30, 30, 30, 0.56);
+                width: 100%;
+                top: 0;
+                left: 0;
+                height: 100%;
+                position: absolute;
+                z-index: 2;
+            }
+        }
+        .content {
+            position: relative;
+            z-index: 4;
+          
+            max-width: 873px;
+            width: 100%;
+            padding: 49px 109px 31px 77px;
+            background: url(../images/Icon-exclamation-triangle.png) no-repeat top 42px left 33px / 88px rgba(0, 82, 153, .91);;
+            @include MQ(MQ-768) {
+                padding: 40px 30px;
+            }
+            * {
+                color: $color-white;
+            }
+            span {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: normal;
+                letter-spacing: normal;
+                display: block;
+                margin-bottom: 4px;
+            }
+            h2 {
+                margin-bottom: 14px;
+            }
+            .btn--primary {
+                margin-top: 47px;
+            }
+        }
+    }
+}
