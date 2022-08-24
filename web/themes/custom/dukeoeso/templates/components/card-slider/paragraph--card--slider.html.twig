@@ -5,7 +5,7 @@
 			<h2 class="h1">{{content.field_card_title}}</h2>
 			<p>{{content.field_card_content}}</p>
 			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-				<a class="btn--primary" href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title}}">
+				<a class="btn--primary" href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|striptags}}">
 					{{content.field_card_link.0['#title']}}
 				</a>
 				{%endif%}
