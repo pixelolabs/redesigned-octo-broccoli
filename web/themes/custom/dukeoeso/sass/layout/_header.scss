@@ -133,6 +133,9 @@ header {
     align-items: flex-end;
     padding-right: 78px;
     position: relative;
+    .report-issue{
+      display: none;
+    }
     .search-block-form{
       display: none;
       @include MQ(MQ-980) {
@@ -142,7 +145,7 @@ header {
     
     @include MQ(MQ-980) {
       display: block;
-      padding-right:0px;
+     
       position: fixed;
       overflow: auto;
       height: 100%;
@@ -156,6 +159,10 @@ header {
       margin: 0;
       z-index: 12;
       padding: 60px 30px;
+      padding-right:100px;
+      @include MQ(MQ-480) {
+      padding-right:60px;
+      }
       &.active {
         transition: 0.3s;
         transform: translateX(0);
@@ -163,6 +170,9 @@ header {
       &.inactive{
         transition: 0.3s;
         transform: translateX(100vw);
+      }
+      .report-issue{
+        display: block;
       }
     }
     .mobile-close{

@@ -37,6 +37,11 @@
     @include MQ(MQ-980) {
       width: 100%;
       order: 2;
+      padding: 0 60px;
+      margin-top: 30px;
+    }
+    @include MQ(MQ-768) {
+      padding: 0 30px;
     }
 
     li {
@@ -53,16 +58,17 @@
         padding: 25px 40px 25px;
       }
 
-      @include MQ(MQ-600) {
+      @include MQ(MQ-768) {
         width: 100%;
         height: 100vw !important;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        padding: 30px;
 
         &:last-child {
           margin-bottom: 0px;
         }
 
-        padding: 25px 20px 25px;
+       
       }
 
       &:last-child {
@@ -145,7 +151,7 @@
     }
 
     @include MQ(MQ-600) {
-      padding: 60px 20px;
+      padding: 40px;
     }
 
     * {
@@ -172,7 +178,12 @@
       z-index: 3;
       padding: 40px 30px 72px 0;
       position: relative;
-
+      @include MQ(MQ-980) {
+        padding: 40px 0px 72px 0;
+      }
+      @include MQ(MQ-600) {
+        padding: 30px 0;
+      }
       h6 {
         font-size: 19px;
         margin-bottom: 3px;

@@ -287,8 +287,22 @@ button {
   font-size: 19px;
   line-height: normal;
 
-  h2,h3,h4,h5,h6{
+h5,h6{
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  h2{
     margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  
+  h3, h4{
+    margin-bottom: 15px;
     &:last-child{
       margin-bottom: 0;
     }
@@ -301,6 +315,11 @@ button {
     color: $color-orange;
   }
   
+
+  h2{
+    line-height: 1.18;
+    font-size: 34px;
+  }
 
   p{
     margin-bottom: 20px;

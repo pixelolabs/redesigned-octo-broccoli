@@ -947,4 +947,7 @@ textarea.input--error {
     
       display: none;
   }
+  @include MQ(MQ-480) {
+    right: -60px;
+  }
 }

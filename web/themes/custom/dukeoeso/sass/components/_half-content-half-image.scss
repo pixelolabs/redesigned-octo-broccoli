@@ -1,7 +1,7 @@
 .half-content-half-image {
     overflow: hidden;
     .outer {
-        width: calc(100% + 154px);
+        width: calc(100% + 233px);
         display: flex;
         flex-wrap: wrap;
         @include MQ(MQ-980) {
@@ -11,7 +11,7 @@
     
    
     .image-section {
-        width: 55.61%;
+        width: 59.11%;
         position: relative;
         img {
             @include img-object-cover;
@@ -35,7 +35,7 @@
        
     }
     .content {
-        width: 44.39%;
+        width: 40.89%;
         padding-right: 33px;
         @include MQ(MQ-768) {
             width: 100% !important;
@@ -46,7 +46,7 @@
     }
     &.left-image {
         .outer {
-            margin-left: -154px;
+            margin-left: -233px;
             @include MQ(MQ-980) {
                 width: 100%;
                 margin-left: 0px;
