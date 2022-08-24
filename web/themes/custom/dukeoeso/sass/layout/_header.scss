@@ -133,6 +133,13 @@ header {
     align-items: flex-end;
     padding-right: 78px;
     position: relative;
+    .search-block-form{
+      display: none;
+      @include MQ(MQ-600) {
+        display: block;
+      }
+    }
+    
     @include MQ(MQ-980) {
       display: block;
       padding-right:0px;
@@ -143,7 +150,7 @@ header {
      
       transform: translateX(100vw);
       overflow-y: auto;
-      background:$color-blue2;
+      background: url(../images/submenu-bg.png) no-repeat center/cover;
       top: 0;
       left: 0;
       margin: 0;
