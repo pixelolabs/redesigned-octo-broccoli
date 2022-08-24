@@ -1,6 +1,10 @@
 .three-column-image-content-section {
-    padding: 117px 0 253px;
+  padding: 30px 0 0;
     position: relative;
+    .container-1920 {
+      padding:110px 110px 220px 30px;
+      @include container-1920-padding-110;
+    }
     @include MQ(MQ-768) {
         background: $color-light-black;
         padding: 60px 0;
@@ -28,23 +32,25 @@
     ul {
         position: relative;
         z-index: 3;
-        max-width: 1818px;
-        width: calc(100% + 93px);
-        margin-left: -93px;
+        // max-width: 1818px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 93px;
+        grid-auto-rows: minmax(100px, auto);
+        
         @include MQ(MQ-1280) {
-            width: calc(100% + 50px);
-            margin-left: -50px;
+          gap: 50px;
+        }
+        @include MQ(MQ-1280) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 50px;
         }
         @include MQ(MQ-768) {
-            width: 100%;
-            margin-left: 0px;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 0;
         }
         li {
-            width: 33.333%;
-            padding-left: 93px;
-            @include MQ(MQ-1280) {
-                padding-left: 50px;
-            }
+          
             @include MQ(MQ-768) {
                 width: 100%;
                 padding-left: 0;
@@ -123,6 +129,9 @@
                     top: auto;
                     bottom: 0;
                 }
+            }
+            &:last-child{
+              margin-right: 0px;
             }
         }
     }

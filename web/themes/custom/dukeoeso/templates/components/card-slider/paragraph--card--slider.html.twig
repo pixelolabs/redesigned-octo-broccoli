@@ -1,0 +1,17 @@
+<div class="swiper-slide slide">
+	<div class="container-1920">
+		<div class="content">
+			<span class="uppercase">{{content.field_pre_title}}</span>
+			<h2 class="h1">{{content.field_card_title}}</h2>
+			<p>{{content.field_card_content}}</p>
+			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+				<a class="btn--primary" href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title}}">
+					{{content.field_card_link.0['#title']}}
+				</a>
+				{%endif%}
+			</div>
+			<div class="image-section">
+				{{content.field_media_img}}
+			</div>
+		</div>
+	</div>

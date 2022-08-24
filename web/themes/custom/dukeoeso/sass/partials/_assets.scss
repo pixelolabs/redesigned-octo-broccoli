@@ -924,3 +924,27 @@ textarea.input--error {
   background: url(icon-arrow-dropdown-dark.png) no-repeat right 20px top 9px/22px
     $color-white;
 }
+
+
+
+.report-issue{
+       
+  padding: 4px 30px 6px;
+  font-size: 17px;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+  border-radius: 16.5px;
+  background: #64528e;
+  color: $color-white;
+  transform: rotate(90deg);
+  display: inline-block;
+  position: fixed;
+  right: -24px;
+  top: 60vh;
+  z-index: 99999;
+  @include MQ(MQ-980) {
+    
+      display: none;
+  }
+}

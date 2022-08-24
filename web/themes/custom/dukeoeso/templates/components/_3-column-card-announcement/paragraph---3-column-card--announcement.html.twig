@@ -9,15 +9,14 @@
 {% block paragraph %}
 	<div{{attributes.addClass(classes)}}>
 		{% block content %}
-			<div class="three-column-image-content-section">
-				<div class="container-1920">
-					<ul>
-         {{content}}
-						</ul>
-					</div>
+			<!-- Annnouncement -->
+			<div class="three-column-content">
+				<div class="container-1260">
+					<ul class="flex-wrap">
+						{{content.field_card_mini}}
+					</ul>
 				</div>
-
-			{% endblock %}
-		</div>
-	{% endblock paragraph %}
-
+			</div>
+		{% endblock %}
+	</div>
+{% endblock paragraph %}

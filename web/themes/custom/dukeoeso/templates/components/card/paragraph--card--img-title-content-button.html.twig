@@ -6,8 +6,10 @@
 		<h2>{{content.field_card_title}}</h3>
 		<p>
 			{{content.field_card_content}}</p>
-		<a href='{{content.field_card_link.0['#url']}}' class="btn--primary">{{content.field_card_link.0['#title']}}</a>
-	</div>
-
-
+		{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+			<a href='{{content.field_card_link.0['#url']}}' class="btn--primary">{{content.field_card_link.0['#title']}}</a>
+			{%endif%}
+		</div>
+	</li>
 </li>
+

@@ -1,171 +1,194 @@
 .two-column-image-and-one-content-section {
-    padding: 88px 0 79px;
+  padding: 88px 0 80px;
+  position: relative;
+
+  @include MQ(MQ-768) {
+    padding: 60px 0;
+  }
+
+  &::after {
+    width: 100%;
+    height: 556px;
+    position: absolute;
+    top: -300px;
+    right: 0;
+    content: '';
+    background: url(../images/bg-graphic-top.png) no-repeat center / cover;
+  }
+
+  .container-1920 {
+    padding: 0px;
+  }
+
+  ul {
+    width: 62.50%;
     position: relative;
-    @include MQ(MQ-768) {
-        padding: 60px 0;
+    z-index: 2;
+
+    @include MQ(MQ-980) {
+      width: 100%
     }
-    &::after{
+
+    li {
+      width: 50%;
+      height: 31.25vw;
+      max-height: 594px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      padding: 25px 78px 25px 70px;
+
+      @include MQ(MQ-1024) {
+        height: 50vw !important;
+        padding: 25px 40px 25px;
+      }
+
+      @include MQ(MQ-600) {
         width: 100%;
-        height: 556px;
+        height: 100vw !important;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        padding: 25px 20px 25px;
+      }
+
+      &:last-child {
+        height: calc(31.25vw + 48px);
+        max-height: 648px;
+
+      }
+
+      .image-section {
         position: absolute;
-        top: -300px;
-        right: 0;
-        content: '';
-        background: url(../images/bg-graphic-top.png) no-repeat center / cover;
-    }
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
 
-    .container-1920 {
-        padding: 0px;
-    }
-    ul {
-        width: 62.50%;
-        position: relative;
-        z-index: 2;
-        @include MQ(MQ-980) {
-            width:100%
+        img {
+          @include img-object-cover;
         }
-        li {
-            width: 50%;
-            height: 31.25vw;
-            max-height: 594px;
-            display: flex;
-            align-items: flex-end;
-            position: relative;
-            padding: 25px 78px 25px 70px;
-            @include MQ(MQ-980) {
-                height: 50vw !important;
-                padding: 25px 40px 25px;
-            }
-            @include MQ(MQ-600) {
-                width: 100%;
-                height: 100vw !important;
-                margin-bottom: 20px;
-                &:last-child{
-                    margin-bottom: 0px;
-                }
-                padding: 25px 20px 25px;
-            }
 
-            &:last-child {
-                height: calc(31.25vw + 48px);
-                max-height: 648px;
-               
-            }
-            .image-section {
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                img {
-                    @include img-object-cover
-                }
-                ;
-                &::before {
-                    width: 100%;
-                    top: 0;
-                    content: '';
-                    left: 0;
-                    z-index: 2;
-                    position: absolute;
-                    height: 100%;
-                    background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0), #414042);
-                }
-            }
-            .content {
-                position: relative;
-                padding-bottom: 24px;
-                z-index: 3;
-                border-bottom: 2px solid $color-white;
-                * {
-                    color: $color-white;
-                }
-                h6 {
-                    line-height: 1.21;
-                    letter-spacing: normal;
-                    margin-bottom: -4px;
-                }
-            }
-            &::before {
-                width: 196px;
-                height: 12px;
-                content: '';
-                position: absolute;
-                right: 0;
-                top: -12px;
-                background-color: $color-blue2;
-            }
-        }
-    }
-    .content-section {
-        width: 37.50%;
-        padding: 90px 84px 102px;
-        position: relative;
-        font-family: $font-family-primary;
-        font-size: 18x;
-        font-weight: normal;
-        line-height: 1.28;
-        letter-spacing: normal;
-        @include MQ(MQ-1200) {
-            padding: 70px 50px 80px;
-        }
-        @include MQ(MQ-980) {
-            width:100%;
-            background: $color-blue2;
-        }
-        @include MQ(MQ-600) {
-            padding: 60px 20px;
-        }
-       
-        * {
-            color: $color-white;
-        }
+
+
         &::before {
-            height: calc(100% + 8px);
-            width: calc(100% + 135px);
-            position: absolute;
-            content: '';
-            top: -57px;
-            left: -135px;
-            z-index: 1;
-            clip-path: polygon(0 0, 100% 18%, 100% 81%, 15% 100%);
-            background: $color-blue2;
-            @include MQ(MQ-1200) {
-                clip-path: polygon(0 0, 100% 18%, 100% 90%, 15% 100%);
-            }
-            @include MQ(MQ-980) {
-                display: none;
-            }
+          width: 100%;
+          top: 0;
+          content: '';
+          left: 0;
+          z-index: 2;
+          position: absolute;
+          height: 100%;
+          background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0), #414042);
         }
-        .content {
-            z-index: 3;
-            h6 {
-                font-size: 19px;
-                margin-bottom: 3px;
-            }
-            h2{
-                margin-bottom: 18px;
-            }
-           
-            .btn--primary {
-                margin-top: 51px;
-            }
-            padding: 40px 0 72px;
-            position: relative;
-            &::before,
-            &::after {
-                height: 2px;
-                width: 28px;
-                position: absolute;
-                content: '';
-                left: 0px;
-                top: 0;
-                background: $color-white;
-            }
-            &::after {
-                top: auto;
-                bottom: 0;
-            }
+      }
+
+      .content {
+        position: relative;
+        padding-bottom: 24px;
+        z-index: 3;
+        border-bottom: 2px solid $color-white;
+
+        * {
+          color: $color-white;
         }
+
+        h6 {
+          line-height: 1.21;
+          letter-spacing: normal;
+          margin-bottom: -4px;
+        }
+      }
+
+      &::before {
+        width: 196px;
+        height: 12px;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -12px;
+        background-color: $color-blue2;
+      }
     }
+  }
+
+  .content-section {
+    width: 37.50%;
+    padding: 90px 84px 102px;
+    position: relative;
+    font-family: $font-family-primary;
+    font-size: 18x;
+    font-weight: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+
+    @include MQ(MQ-1200) {
+      padding: 70px 50px 80px;
+    }
+
+    @include MQ(MQ-980) {
+      width: 100%;
+      background: $color-blue2;
+    }
+
+    @include MQ(MQ-600) {
+      padding: 60px 20px;
+    }
+
+    * {
+      color: $color-white;
+    }
+
+    &::before {
+      height: calc(100% + 8px);
+      width: calc(100% + 135px);
+      position: absolute;
+      content: '';
+      top: -57px;
+      left: -135px;
+      z-index: 1;
+      clip-path: polygon(0 0, 100% 18%, 100% 81%, 15% 100%);
+      background: $color-blue2;
+
+ 
+    }
+
+    .content {
+      z-index: 3;
+      padding: 40px 30px 72px 0;
+      position: relative;
+
+      h6 {
+        font-size: 19px;
+        margin-bottom: 3px;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+      }
+
+      .btn--primary {
+        margin-top: 51px;
+      }
+
+      &::before,
+      &::after {
+        height: 2px;
+        width: 28px;
+        position: absolute;
+        content: '';
+        left: 0px;
+        top: 0;
+        background: $color-white;
+      }
+
+      &::after {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
 }
