@@ -352,18 +352,27 @@ header {
 
 /*Notification*/
 .top-alert-notification{
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  min-height: 77px;
-  background: $color-dark-orange;
-  position: absolute;
   max-width: 1920px;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 4;
   margin: 0 auto;
+  @include MQ(MQ-980) {
+    padding-right: 0 !important;
+  }
+  .inner{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 77px;
+  background: $color-dark-orange;
+ 
+
+ 
   p{
     font-size: 19px;
     padding-left: 69px;
@@ -380,5 +389,7 @@ background: url(../images/icon-alert-triangle.png) no-repeat top left / 30px;
     display: block;
     background: url(../images/icon-cross-small.png) no-repeat center / 21px;
   }
+
+}
 
 }
