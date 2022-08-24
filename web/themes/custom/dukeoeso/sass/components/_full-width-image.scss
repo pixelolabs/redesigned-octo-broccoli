@@ -1,13 +1,11 @@
-.half-content-half-image{
-    .outer{
-        width: calc(100% + 154px);
-        display: flex;
-        
-    }
+.full-width-image{
+
+padding: 77px 0;
+   
     .image-section{
-        width: 55.61%;
+        width: 100%;
         position: relative;
-      
+        height: 549px;
         img{
             @include img-object-cover;
         }
@@ -36,19 +34,5 @@ color: $color-white;
 border-bottom:2px solid $color-white;
         }
     }
-    .content{
-        width: 44.39%;
-        padding-right: 33px;
-    }
-
-    &.left-image{
-        .outer{
-           margin-left: -154px; 
-        }
-        .content{
-            order: 1;
-            padding-right: 0px;
-            padding-left: 33px;
-        }
-    }
+   
 }
