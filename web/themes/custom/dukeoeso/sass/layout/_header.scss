@@ -1,6 +1,6 @@
 
 header {
-  position: fixed;
+  position: absolute;
   padding-top: 35px;
   padding-bottom: 10px;
   top: 77px;
@@ -15,7 +15,7 @@ header {
     padding-right: 80px;
     padding-top: 10px;
   }
-  &.fixed,
+  
   &.black-bg {
     background: $color-light-black;
   }
@@ -357,7 +357,7 @@ header {
   align-items: center;
   min-height: 77px;
   background: $color-dark-orange;
-  position: fixed;
+  position: absolute;
   max-width: 1920px;
   width: 100%;
   top: 0;
