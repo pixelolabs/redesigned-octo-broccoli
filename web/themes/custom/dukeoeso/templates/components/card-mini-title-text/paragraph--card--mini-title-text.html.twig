@@ -1,0 +1,10 @@
+<li>
+	{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title}}">
+			{%endif%}
+			<b>{{content.field_card_title}}</b>
+			<p>{{content.field_card_content}}</p>
+			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+			</a>
+			{%endif%}
+		</li>

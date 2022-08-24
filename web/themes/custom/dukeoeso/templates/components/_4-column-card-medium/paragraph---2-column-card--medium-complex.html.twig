@@ -11,24 +11,25 @@
 		{% block content %}
 			<div class="two-column-image-and-one-content-section">
 				<div class="container-1920 flex-wrap">
-       
-       
-       
 					<ul class="flex-wrap">
 						{{content.field_card_medium}}
 					</ul>
-          	<div class="content-section">
-
-		<div class="content">
-			<h6 class="uppercase"> {{content.field_pre_title}}</h6>
-			<h2> {{content.field_2_clmn_card__medium_title}}</h2>
-			 {{content.field_2_clmn_card__medium_conten}}
-			<a class="btn--primary">Learn more</a>
-		</div>
-	</div>
+					<div class="content-section">
+						<div class="content">
+							<h6 class="uppercase">
+								{{content.field_pre_title}}</h6>
+							<h2>
+								{{content.field_2_clmn_card__medium_title}}</h2>
+							<div>
+								{{content.field_2_clmn_card__medium_conten}}
+							</div>
+							{% if content.field_2_clmn_card__medium_link.0['#url'].isEmpty() == FALSE %}
+								<a href='{{content.field_2_clmn_card__medium_link.0['#url']}}' class="btn--primary">{{content.field_2_clmn_card__medium_link.0['#title']}}</a>
+								{%endif%}
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		{% endblock %}
-	</div>
-{% endblock paragraph %}
-
+			{% endblock %}
+		</div>
+	{% endblock paragraph %}

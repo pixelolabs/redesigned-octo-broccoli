@@ -253,3 +253,19 @@ $MQ-1920: 1920px;
     opacity: 0;
   }
 }
+
+
+
+
+
+@mixin container-1920-padding-110 {
+  @include MQ(MQ-980) {
+    padding: 0 60px;
+ }
+  @include MQ(MQ-768) {
+    padding: 0 60px;
+ }
+ @include MQ(MQ-480) {
+   padding: 0 30px;
+}
+}

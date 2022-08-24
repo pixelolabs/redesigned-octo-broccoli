@@ -1,3 +1,4 @@
+
 header {
   position: fixed;
   padding-top: 35px;
@@ -14,13 +15,14 @@ header {
     padding-right: 0px;
     padding-top: 10px;
   }
-  &.fixed,&.black-bg{
+  &.fixed,
+  &.black-bg {
     background: $color-light-black;
   }
   .container-1805 {
     justify-content: space-between;
   }
-  .top-section{
+  .top-section {
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -42,7 +44,6 @@ header {
   .search-block-form {
     width: 222px;
     position: relative;
-  
     div {
       width: 100%;
     }
@@ -86,11 +87,11 @@ header {
     margin-top: 11px;
     flex-direction: column;
     align-items: flex-end;
-   padding-right: 78px;
-   position: relative;
-   @include MQ(MQ-980) {
-    display: none;
-   }
+    padding-right: 78px;
+    position: relative;
+    @include MQ(MQ-980) {
+      display: none;
+    }
     .nav {
       padding-top: 13px;
       position: relative;
@@ -105,77 +106,66 @@ header {
         position: absolute;
       }
       .sub-menu-wrapper {
-      display: none;
-     position: absolute;
-     width: 927px;
-     right: -78px;
-     
-     margin-top: 10px;
-     background: url(../images/submenu-bg.png) no-repeat center/cover;
-     padding: 60px 64px;
-     @include MQ(MQ-1200) {
-      width: 850px;
-      padding:40px;
-     }
-     h4{
-      font-size: 20px;
-  font-weight: bold;
-position: relative;
-padding-top: 10px;
-margin-bottom: 22px;
-&::before{
-  width: 40px;
-  height: 4px;
-  content: '';
-  left: 0;
-  top: 0;
-  position: absolute;
-  background:$color-yellow ;
-  
-}
-  line-height: normal;
-  letter-spacing: normal;
-
-  color: $color-yellow;
-     }
-     *{
-      color: $color-white;
-     }
-
-     a{
-      font-size: 15px;
-      font-weight: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: left;
-      color: $color-faded-grey;
-     
-      display: inline-block;
-     }
-
-     ul{
-      width: 100%;
-     min-height: 310px;
-
-     float: none;
-     column-count: 5;
-     column-width: 20%;
-     column-gap: 31px;
-     box-sizing: border-box;
-     li{
-      margin-bottom: 44px;
-     }
-     }
+        display: none;
+        position: absolute;
+        width: 927px;
+        right: -78px;
+        margin-top: 10px;
+        background: url(../images/submenu-bg.png) no-repeat center/cover;
+        padding: 60px 64px;
+        @include MQ(MQ-1200) {
+          width: 850px;
+          padding: 40px;
+        }
+        h4 {
+          font-size: 20px;
+          font-weight: bold;
+          position: relative;
+          padding-top: 10px;
+          margin-bottom: 22px;
+          &::before {
+            width: 40px;
+            height: 4px;
+            content: '';
+            left: 0;
+            top: 0;
+            position: absolute;
+            background: $color-yellow;
+          }
+          line-height: normal;
+          letter-spacing: normal;
+          color: $color-yellow;
+        }
+        * {
+          color: $color-white;
+        }
+        a {
+          font-size: 15px;
+          font-weight: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: $color-faded-grey;
+          display: inline-block;
+        }
+        ul {
+          width: 100%;
+          min-height: 310px;
+          float: none;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 40px;
+          grid-auto-rows: minmax(20px, auto);
+          box-sizing: border-box;
+        }
       }
       >li {
-         margin-right: 60px;
-         padding-bottom:10px ;
-         
-          &:last-child{
-            margin-right: 0;
-          }
+        margin-right: 60px;
+        padding-bottom: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
         .menu-wrapper {
-          
           >a {
             font-family: $font-family-primary;
             font-size: 17px;
@@ -184,39 +174,34 @@ margin-bottom: 22px;
             letter-spacing: normal;
             text-align: left;
             color: $color-white;
-            
           }
         }
-        &.has-sub{
-          &:hover{
+        &.has-sub {
+          &:hover {
             .sub-menu-wrapper {
               display: block;
             }
             .menu-wrapper {
-              >a{
+              >a {
                 color: $color-yellow;
-                &::after{
+                &::after {
                   width: 10px;
                   content: '-';
-                  
                 }
               }
+            }
           }
-        }
           .menu-wrapper {
-            >a{
+            >a {
               position: relative;
-             
-          &::after{
-            width: 10px;
-            content: '+';
-            
+              &::after {
+                width: 10px;
+                content: '+';
+              }
+            }
           }
-        }
-      }
         }
       }
     }
-   
   }
 }
