@@ -1,6 +1,17 @@
 .five-column-list-content-with-heading {
   padding: 130px 0 80px;
-  background: url(../images/bg-graphic.png) no-repeat center / cover;
+  position: relative;
+  &::before{
+    height: 554px;
+    width: 100%;
+    background: url(../images/bg-graphic.png) no-repeat top left / cover;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -66px;
+    z-index: 1;
+  }
+
   @include MQ(MQ-768) {
     padding: 60px 0;
   }

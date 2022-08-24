@@ -82,7 +82,7 @@ header {
   .search-block-form {
     width: 222px;
     position: relative;
-    @include MQ(MQ-600) {
+    @include MQ(MQ-980) {
       display: none;
     }
     div {
@@ -135,7 +135,7 @@ header {
     position: relative;
     .search-block-form{
       display: none;
-      @include MQ(MQ-600) {
+      @include MQ(MQ-980) {
         display: block;
       }
     }
@@ -151,7 +151,7 @@ header {
       transform: translateX(100vw);
       overflow-y: auto;
       background: url(../images/submenu-bg.png) no-repeat center/cover;
-      top: 0;
+      top: -2px;
       left: 0;
       margin: 0;
       z-index: 12;
@@ -209,6 +209,7 @@ header {
           right: 0;
           display: block;
           padding: 0px;
+          margin-top: 20px;
           margin-left: 20px;
         }
         h4 {
@@ -258,7 +259,10 @@ header {
             min-height: auto;
             display: block;
            li{
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            &:last-child{
+              margin-bottom: 0px;
+            }
             
            }
 

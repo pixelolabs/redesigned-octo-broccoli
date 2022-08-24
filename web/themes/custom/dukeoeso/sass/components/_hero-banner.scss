@@ -6,15 +6,11 @@
 
   .slider {
     overflow: hidden;
-    height: 1023px !important;
-
+    max-height: 1023px !important;
+    height: 80vh;
+    min-height: 800px !important;
     @include MQ(MQ-980) {
-      height: 800px;
-    }
-
-    @include MQ(MQ-768) {
       min-height: 700px !important;
-      height: auto;
     }
   }
 
@@ -95,16 +91,13 @@
   }
 
   .slide {
-    height: 1023px !important;
-
+    max-height: 1023px !important;
+    height: 80vh;
+    min-height: 800px !important;
     @include MQ(MQ-980) {
-      height: 800px;
-    }
-
-    @include MQ(MQ-768) {
       min-height: 700px !important;
-      height: auto;
     }
+   
 
     .container-1920 {
       display: flex;

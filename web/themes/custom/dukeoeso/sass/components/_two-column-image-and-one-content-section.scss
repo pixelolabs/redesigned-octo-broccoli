@@ -1,7 +1,16 @@
 .two-column-image-and-one-content-section {
   padding: 88px 0 80px;
   position: relative;
-
+&::before{
+  height: 555px;
+  width: 100%;
+  background: url(../images/vector-graphics.png) no-repeat top right / cover;
+  position: absolute;
+  content: '';
+  right: 0;
+  top: -310px;
+  
+}
   @include MQ(MQ-768) {
     padding: 60px 0;
   }
@@ -26,7 +35,8 @@
     z-index: 2;
 
     @include MQ(MQ-980) {
-      width: 100%
+      width: 100%;
+      order: 2;
     }
 
     li {
@@ -99,7 +109,7 @@
         h6 {
           line-height: 1.21;
           letter-spacing: normal;
-          margin-bottom: -4px;
+          
         }
       }
 
@@ -120,9 +130,9 @@
     padding: 90px 84px 102px;
     position: relative;
     font-family: $font-family-primary;
-    font-size: 18x;
+    font-size: 19px;
     font-weight: normal;
-    line-height: 1.28;
+    line-height: 1.21;
     letter-spacing: normal;
 
     @include MQ(MQ-1200) {
@@ -152,7 +162,9 @@
       z-index: 1;
       clip-path: polygon(0 0, 100% 18%, 100% 81%, 15% 100%);
       background: $color-blue2;
-
+      @include MQ(MQ-980) {
+       display: none;
+      }
  
     }
 
