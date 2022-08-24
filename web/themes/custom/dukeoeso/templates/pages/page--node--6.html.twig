@@ -43,19 +43,29 @@
  * @see html.html.twig
  */
 #}
+
 <header class="js__main-header black-bg">
-    <div class="container-1805 flex">
-        <div class="top-section flex">
-            <div class="logo-section">
-                <a><img src="/{{ directory }}/images/logo.png" /></a>
-            </div>
-            {{ page.header }}
-        </div>
-    </div>
-    <div class="menu-section">
-        {{ page.navigation}}
-    </div>
-    </div>
+	<div class="container-1805 flex">
+		<div class="top-section flex">
+			<div class="logo-section none-980">
+				<a><img src="/{{ directory }}/images/logo.png"/></a>
+			</div>
+			<div class="logo-section block-980">
+				<a><img src="/{{ directory }}/images/logo-duke-health.png" /></a>
+			</div>
+			{{ page.header }}
+		</div>
+	</div>
+
+	<div class="menu-section js__menu-section">
+	<a class="mobile-close js__mobilemenu-close">
+	</a>
+		{{ page.navigation}}
+	</div>
+	<a class="mobile-hamburger js__mobile-hamburger">
+	</a>
+</div>
+
 </header>
 <div class="wrapper">
     <div class="full-width-content full-format">

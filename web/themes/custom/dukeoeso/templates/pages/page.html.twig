@@ -44,17 +44,34 @@
  */
 #}
 	<a class="report-issue" href="#">Report an Issue</a>
+	<div class="top-alert-notification">
+	<div class="container-1800">
+	<p>This the alert notification bar. Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+
+	</div>
+	<a class="close"></a>
+	</div>
 <header class="js__main-header">
 	<div class="container-1805 flex">
 		<div class="top-section flex">
-			<div class="logo-section">
+			<div class="logo-section none-980">
 				<a><img src="/{{ directory }}/images/logo.png"/></a>
+			</div>
+			<div class="logo-section block-980">
+				<a><img src="/{{ directory }}/images/logo-duke-health.png" /></a>
 			</div>
 			{{ page.header }}
 		</div>
 	</div>
-	<div class="menu-section">
+
+	<div class="menu-section js__menu-section">
+	<a class="mobile-close js__mobilemenu-close">
+	</a>
 		{{ page.navigation}}
 	</div>
-</div></header><div class="wrapper">
+	<a class="mobile-hamburger js__mobile-hamburger">
+	</a>
+</div>
+
+</header><div class="wrapper">
 {{ page.content }}</div>{{page.footer}}

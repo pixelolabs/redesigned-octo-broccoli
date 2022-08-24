@@ -1,5 +1,11 @@
 .four-column-content-list {
     padding: 73px 0;
+    @include MQ(MQ-980) {
+        padding: 73px 0 13;
+    }
+    @include MQ(MQ-480) {
+        padding: 60px 0 0;
+    }
     h2 {
         text-align: center;
         color: $color-blue2;
@@ -11,10 +17,51 @@
         margin-top: 67px;
         display: flex;
         flex-wrap: wrap;
+        @include MQ(MQ-480) {
+            margin-top: 40px;
+        }
         .block {
             width: calc(25% - 111px);
             margin-right: 148px;
             position: relative;
+            @include MQ(MQ-1200) {
+                width: calc(25% - 60px);
+            margin-right: 80px;
+            }
+            @include MQ(MQ-980) {
+                width: calc(50% - 40px);
+                margin-bottom: 60px;
+                &:nth-child(even){
+                    margin-right: 0px !important;
+                    &::before{
+                        display: none !important;
+                    }
+                }
+            }
+            @include MQ(MQ-768) {
+                width: 100%;
+                 margin-right: 0px !important;
+                 padding-bottom: 60px;
+                 &::before{
+                    display: block !important;
+                    width: 100% !important;
+                    height: 1px !important;
+                    right: 0 !important;
+                    bottom: 0 !important;
+                    top: auto !important;
+                }
+                &:nth-child(even)::before{
+                    display: block !important;
+                }
+                &:last-child
+                {
+                    padding-bottom: 0px;
+                
+                &::before{
+                    display: none !important;
+                }
+            }
+            }
             &::before {
                 content: '';
                 background: $color-light-black;
@@ -23,6 +70,9 @@
                 right: -74px;
                 position: absolute;
                 top: 0;
+                @include MQ(MQ-1200) {
+                    right: -40px;
+                }
             }
             &:last-child {
                 &::before {
@@ -42,6 +92,9 @@
                     list-style: none;
                     padding-left: 24px;
                     position: relative;
+                    @include MQ(MQ-480) {
+                        font-size: 16px;
+                    }
                     &::before {
                         width: 8px;
                         height: 8px;

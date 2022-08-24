@@ -1,17 +1,23 @@
 .faq-accordian{
-    padding: 162px 0 307px;
+    padding: 100px 0;
+    @include MQ(MQ-480) {
+        padding: 60px 0px;
+    }
     h2 {
         text-align: center;
         color: $color-blue2;
         margin-bottom: 32px;
       
     }
-.container-825{
+.container-885{
 > ul{
 >li{
     margin-bottom: 2px;
     h6{
         padding: 24px 65px 18px 32px;
+        @include MQ(MQ-480) {
+            padding: 24px 65px 18px 20px;
+        }
         color: $color-white;
         background: url(../images/Icon-plus-white.png) no-repeat top 24px right 35px / 24px $color-blue2;
        
@@ -30,13 +36,19 @@
         background-color: rgba(0, 83, 153, 0.05);
         display: none;
         padding: 28px 75px 28px 66px;
+        @include MQ(MQ-480) {
+            padding: 20px;
+        }
         border-top: 4px solid $color-blue2;
         border-bottom: 4px solid $color-blue2;
         *{
             font-size: 19px;
             line-height: normal;
             letter-spacing: normal;
-color: $color-blue2;        
+color: $color-blue2;
+@include MQ(MQ-480) {
+    font-size: 16px;
+}        
 }
         
         ul {
@@ -48,6 +60,9 @@ color: $color-blue2;
                 list-style: none;
                 padding-left: 24px;
                 position: relative;
+                @include MQ(MQ-480) {
+                    font-size: 16px;
+                }
                 &::before {
                     width: 8px;
                     height: 8px;

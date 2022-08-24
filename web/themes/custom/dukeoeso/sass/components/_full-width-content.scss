@@ -1,6 +1,7 @@
 .full-width-content{
     padding: 350px 0 80px;
+    overflow: hidden;
     &.no-padding{
-        padding: 21px 0 0px;
+        padding: 0;
     }
 }

@@ -3,16 +3,16 @@ header {
   position: fixed;
   padding-top: 35px;
   padding-bottom: 10px;
-  top: 0;
+  top: 77px;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 10;
   max-width: 1920px;
   margin: 0 auto;
   width: 100%;
   padding-right: 110px;
   @include MQ(MQ-980) {
-    padding-right: 0px;
+    padding-right: 80px;
     padding-top: 10px;
   }
   &.fixed,
@@ -40,10 +40,51 @@ header {
       width: 600px;
       height: 50px;
     }
+    @include MQ(MQ-980) {
+      width: 236px;
+      height: 56px;
+    }
+    @include MQ(MQ-400) {
+      width: 200px;
+      height: 46px;
+    }
   }
+
+  .mobile-hamburger{
+    width: 50px;
+    display: none;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    @include MQ(MQ-980) {
+      display: block;
+    }
+    @include MQ(MQ-400) {
+      top: 10px;
+    }
+    background: url(../images/icon-hamburger.png) no-repeat center / 50px;
+  }
+
+  .mobile-close{
+    width: 37px;
+    height: 29px;
+    position: absolute;
+    top: 20px;
+    filter: brightness(0) invert(1);
+    right: 30px;
+    background: url(../images/icon-cross.png) no-repeat center / 37px;
+  }
+  
+
+
+  
   .search-block-form {
     width: 222px;
     position: relative;
+    @include MQ(MQ-600) {
+      display: none;
+    }
     div {
       width: 100%;
     }
@@ -79,6 +120,9 @@ header {
       width: 22px;
       height: 22px;
       font-size: 0px;
+      border: none;
+      background: url(../images/Icon-search.png) no-repeat center / 22px;
+      
     }
   }
   .menu-section {
@@ -90,12 +134,43 @@ header {
     padding-right: 78px;
     position: relative;
     @include MQ(MQ-980) {
+      display: block;
+      padding-right:0px;
+      position: fixed;
+      overflow: auto;
+      height: 100%;
+      width: 100%;
+     
+      transform: translateX(100vw);
+      overflow-y: auto;
+      background:$color-blue2;
+      top: 0;
+      left: 0;
+      margin: 0;
+      z-index: 12;
+      padding: 60px 30px;
+      &.active {
+        transition: 0.3s;
+        transform: translateX(0);
+      }
+      &.inactive{
+        transition: 0.3s;
+        transform: translateX(100vw);
+      }
+    }
+    .mobile-close{
       display: none;
+      @include MQ(MQ-980) {
+        display: block;
+      }
     }
     .nav {
       padding-top: 13px;
       position: relative;
       display: flex;
+      @include MQ(MQ-980) {
+        flex-direction: column;
+      }
       &::before {
         left: 0;
         width: calc(100% + 300px);
@@ -104,6 +179,9 @@ header {
         top: 0;
         content: '';
         position: absolute;
+        @include MQ(MQ-980) {
+          display: none;
+        }
       }
       .sub-menu-wrapper {
         display: none;
@@ -116,6 +194,15 @@ header {
         @include MQ(MQ-1200) {
           width: 850px;
           padding: 40px;
+        }
+        @include MQ(MQ-980) {
+          background: none;
+          width: auto;
+          position: relative;
+          right: 0;
+          display: block;
+          padding: 0px;
+          margin-left: 20px;
         }
         h4 {
           font-size: 20px;
@@ -135,6 +222,9 @@ header {
           line-height: normal;
           letter-spacing: normal;
           color: $color-yellow;
+          @include MQ(MQ-980) {
+            display: none;
+          }
         }
         * {
           color: $color-white;
@@ -157,11 +247,24 @@ header {
           gap: 40px;
           grid-auto-rows: minmax(20px, auto);
           box-sizing: border-box;
+          @include MQ(MQ-980) {
+            min-height: auto;
+            display: block;
+           li{
+            margin-bottom: 10px;
+            
+           }
+
+          }
         }
       }
       >li {
         margin-right: 60px;
         padding-bottom: 10px;
+        @include MQ(MQ-980) {
+          margin-right: 0px;
+          padding-bottom: 20px;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -174,6 +277,10 @@ header {
             letter-spacing: normal;
             text-align: left;
             color: $color-white;
+            @include MQ(MQ-980) {
+              font-size: 20px;
+              color: $color-yellow;
+            }
           }
         }
         &.has-sub {
@@ -184,17 +291,36 @@ header {
             .menu-wrapper {
               >a {
                 color: $color-yellow;
+                position: relative;
                 &::after {
+                
                   width: 10px;
                   content: '-';
+                }
+                &::before{
+                  width: 51px;
+                  height: 11px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: 0 auto;
+                  bottom: -12px;
+                  content: '';
+                  background: url(../images/icon-polygon.png) no-repeat center / 51px;
                 }
               }
             }
           }
           .menu-wrapper {
             >a {
+              padding-right: 15px;
               position: relative;
               &::after {
+                @include MQ(MQ-980) {
+                  display: none;
+                }
+                position: absolute;
+                right: 0;
                 width: 10px;
                 content: '+';
               }
@@ -204,4 +330,48 @@ header {
       }
     }
   }
+}
+
+
+@media only screen and (min-width: 981px) {
+  header {
+  .menu-section {
+    transition: 0s;
+    transform: translateX(0);
+  }
+}
+}
+
+
+/*Notification*/
+.top-alert-notification{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  min-height: 77px;
+  background: $color-dark-orange;
+  position: fixed;
+  max-width: 1920px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  p{
+    font-size: 19px;
+    padding-left: 69px;
+line-height: normal;
+color: $color-white;
+background: url(../images/icon-alert-triangle.png) no-repeat top left / 30px;
+  }
+  .close{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    display: block;
+    background: url(../images/icon-cross-small.png) no-repeat center / 21px;
+  }
+
 }

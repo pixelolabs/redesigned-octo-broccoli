@@ -52,5 +52,16 @@ jQuery(function () {
         $(this).parent("li").removeClass("active");
       }
     });
+
+
+    /*Header*/
+    $(".js__mobile-hamburger").on("click", function () {
+      $(".js__menu-section").addClass("active");
+      $(".js__menu-section").removeClass("inactive");
+    });
+    $(".js__mobilemenu-close").on("click", function () {
+      $(".js__menu-section").removeClass("active");
+      $(".js__menu-section").addClass("inactive");
+    });
   })
 
