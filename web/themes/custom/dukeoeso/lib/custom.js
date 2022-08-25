@@ -63,5 +63,11 @@ jQuery(function () {
       $(".js__menu-section").removeClass("active");
       $(".js__menu-section").addClass("inactive");
     });
+
+    /*Top alert close*/
+    $(".js__top-alert-notification-close").on("click", function () {
+      $(".js__top-alert-notification").hide();
+      $('.js__main-header').css("top","0");
+    })
   })
 

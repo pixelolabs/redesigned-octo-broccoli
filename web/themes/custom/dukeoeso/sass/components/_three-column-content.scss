@@ -34,7 +34,7 @@
             }
         }
         p,b{
-            color: $color-green;
+            color: #5F812C;
             font-size: 19px;
             letter-spacing: normal;
             line-height: 1.21;
@@ -43,6 +43,20 @@
             text-decoration: underline;
             display: block;
             margin-bottom: 4px;
+        }
+
+  
+        
+        &:nth-child(2){
+            *{
+                color: $color-blue2;
+    
+}
+        }
+        &:nth-child(3){
+            *{
+                color: $color-lignt-blue;
+            }
         }
     }
    }

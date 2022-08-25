@@ -17,6 +17,7 @@
         margin-top: 67px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         @include MQ(MQ-480) {
             margin-top: 40px;
         }

@@ -135,13 +135,11 @@ h1 {
   font-size: 38px;
   font-weight: normal;
   text-transform: capitalize;
-  line-height: 0.61;
+  line-height: 1.37;
   letter-spacing: normal;
   text-align: left;
   color: #414042;
-  @include MQ(MQ-480) {
-    font-size: 40px;
-  }
+  
   // &::after{
   //   content:'';
   //   position: absolute;
@@ -476,7 +474,9 @@ ol {
   margin: 0 auto;
   width: 100%;
   padding: 300px 0 100px;
-
+  @include MQ(MQ-980) {
+    padding: 200px 0 100px;
+  }
 
 }
 
@@ -523,6 +523,16 @@ ol {
 .container-1620 {
   width: 100%;
   max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 60px;
+  @include MQ(MQ-768) {
+    padding: 0 30px;
+  }
+}
+
+.container-1510 {
+  width: 100%;
+  max-width: 1510px;
   margin: 0 auto;
   padding: 0 60px;
   @include MQ(MQ-768) {
@@ -1006,5 +1016,19 @@ ol {
       width: calc(100% - 40px);
       bottom: 20px;
       left: 20px;
+  }
+}
+
+.generic{
+  position: relative;
+  &::before{
+    height: 554px;
+    width: 100%;
+    background: url(../images/bg-graphic.png) no-repeat top left / cover;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 800px;
+    z-index: 1;
   }
 }

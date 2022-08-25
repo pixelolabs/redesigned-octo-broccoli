@@ -1,0 +1,46 @@
+.page-title-section{
+    padding: 50px 0 0px;
+    h1{
+    padding-bottom: 17px;
+    position: relative;
+    line-height: 1.37;
+    &::before{
+        width: 63px;
+  height: 4px;
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+  background-color: $color-yellow;
+    }
+    }
+
+    .breadcrumbs{
+        margin-top: 15px;
+        li{
+            font-size: 17px;
+            font-weight: normal;
+            color: $color-black;
+            line-height: 1.35;
+            font-weight: bold;
+            color: $color-blue2;
+            &::before{
+                content: '> ';
+                font-weight: normal;
+                color: $color-black;
+                
+            }
+            &:first-child{
+                &::before{
+                    display: none;
+                }
+            }
+
+            a{
+                font-weight: normal;
+            color: $color-black;
+            }
+        }
+    }
+
+}

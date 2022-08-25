@@ -390,9 +390,21 @@ header {
   p{
     font-size: 19px;
     padding-left: 69px;
+    padding-right: 30px;
 line-height: normal;
 color: $color-white;
-background: url(../images/icon-alert-triangle.png) no-repeat top left / 30px;
+background: url(../images/icon-alert-triangle.png) no-repeat center left / 30px;
+@include MQ(MQ-600) {
+  background-size: 20px !important;
+  padding-left: 35px;
+  padding-right: 20px;
+}
+@include MQ(MQ-768) {
+  font-size: 16px;
+}
+@include MQ(MQ-600) {
+  font-size: 14px;
+}
   }
   .close{
     width: 21px;
@@ -402,6 +414,11 @@ background: url(../images/icon-alert-triangle.png) no-repeat top left / 30px;
     right: 30px;
     display: block;
     background: url(../images/icon-cross-small.png) no-repeat center / 21px;
+    @include MQ(MQ-600) {
+      width: 16px;
+      height: 16px;
+      background-size: 16px !important;
+    }
   }
 
 }
