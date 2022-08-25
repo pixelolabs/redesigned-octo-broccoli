@@ -13,7 +13,7 @@
     margin-top: -40px;
     padding: 16px 20px;
 
-    z-index: 1;
+    z-index: 3;
     position: relative;
     li{
         width: calc(33.333% - 55px);
@@ -38,10 +38,19 @@
             font-size: 19px;
             letter-spacing: normal;
             line-height: 1.21;
+            display: inline-flex;
+            cursor: pointer;
+            z-index: 4;
+            position: relative;
+            &:hover{
+               
+                background: $color-yellow;
+                
+            }
         }
         b{
             text-decoration: underline;
-            display: block;
+            
             margin-bottom: 4px;
         }
 

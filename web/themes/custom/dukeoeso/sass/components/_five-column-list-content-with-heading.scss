@@ -18,6 +18,8 @@
   .container-1920 {
     padding-right: 110px;
     @include container-1920-padding-110;
+    position: relative;
+    z-index: 5;
   }
   .list-block-outer {
     margin-top: 60px;
@@ -65,6 +67,9 @@
       line-height: normal;
       letter-spacing: normal;
       color: $color-blue2;
+      &:hover{
+        color: $color-yellow;
+      }
      }
       &:last-child {
         margin-bottom: 0px;

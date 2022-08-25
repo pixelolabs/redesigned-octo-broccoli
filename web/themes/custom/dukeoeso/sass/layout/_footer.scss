@@ -73,6 +73,9 @@ footer {
           font-weight: bold;
           line-height: normal;
           letter-spacing: normal;
+          &:hover{
+            color: $color-yellow;
+          }
         }
       }
     }
@@ -94,6 +97,9 @@ footer {
           font-weight: normal;
           line-height: 1.35;
           letter-spacing: normal;
+          &:hover{
+            color: $color-yellow;
+          }
         }
       }
     }

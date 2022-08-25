@@ -109,25 +109,45 @@ $MQ-1920: 1920px;
   text-align: center;
   color: $color-light-black !important;
   width: 100%;
-  border-radius: 34px;
-  border: solid 2px $color-yellow;
+  border-radius: 26px;
+  background: $color-yellow;
   -webkit-appearance: none;
   -moz-appearance: none;
   text-decoration: none !important;
-  padding: 19.75px 50px;
+  padding: 12px 42px;
   max-width: fit-content;
   position: relative;
+  transition: 0.35s ease-out;
+
   &::before{
-    width: calc(100% - 16px);
-    height: calc(100% - 16px);
-    left: 8px;
-    top: 8px;
-    border-radius: 26px;
-    background-color: $color-yellow;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    left: -9px;
+    top: -9px;
+    transition: 0.35s ease-out;
+    border-radius: 34px;
+    border: 2px solid $color-yellow;
     content: '';
     position: absolute;
     z-index: -1;
+    transition: 0.35s ease-out;
   }
+  &:hover{
+    background: $color-dark-blue !important;
+    color: $color-white !important;
+    transition: 0.35s ease-out;
+    &::before{
+      transition: 0.35s ease-out;
+      width: calc(100% + 1px);
+      height: calc(100% + 1px);
+      left: -1px;
+      top: -1px;
+      border: 1px solid $color-white !important;
+      
+    }
+  }
+
+  
 }
 
 /*Content*/

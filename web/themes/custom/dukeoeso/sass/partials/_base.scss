@@ -248,10 +248,11 @@ button {
 .btn--secondary {
   @include px-button;
  
-  border: 2px solid $color-orange;
+  
+  background: $color-orange;
   color: $color-white !important;
   &::before{
-    background: $color-orange;
+    border: 2px solid $color-orange;
   }
 }
 
@@ -280,6 +281,10 @@ button {
   background: url(../images/Icon-arrow-forward.png) no-repeat center right / 9px;
   padding-right: 18px;
   color: $color-orange;
+  &:hover{
+    filter: brightness(0) saturate(100%) invert(21%) sepia(32%) saturate(5443%) hue-rotate(193deg) brightness(87%) contrast(101%);
+  }
+
   
 }
 

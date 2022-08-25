@@ -56,6 +56,10 @@ header {
     position: absolute;
     top: 15px;
     right: 30px;
+    transition: none;
+    &:hover{
+      filter: brightness(0) saturate(100%) invert(82%) sepia(99%) saturate(1913%) hue-rotate(313deg) brightness(99%) contrast(104%);
+    }
     @include MQ(MQ-980) {
       display: block;
     }
@@ -70,6 +74,7 @@ header {
     height: 29px;
     position: absolute;
     top: 20px;
+    
     filter: brightness(0) invert(1);
     right: 30px;
     background: url(../images/icon-cross.png) no-repeat center / 37px;
@@ -81,6 +86,9 @@ header {
   .search-block-form {
     width: 222px;
     position: relative;
+    .form-wrapper{
+      position: initial !important;
+    }
     @include MQ(MQ-980) {
       display: none;
     }
@@ -93,8 +101,8 @@ header {
     input[type="search"] {
       width: 100%;
       max-width: 222px;
-      padding: 5.5px 40px 6px 15px;
-      border-radius: 16.5px;
+      padding: 5.5px 40px 6px 15px !important;
+      border-radius: 16.5px !important;
       border: none;
       box-sizing: border-box;
       font-family: $font-family-primary;
@@ -114,7 +122,8 @@ header {
     }
     input[type="submit"] {
       position: absolute;
-      top: 6px;
+      top: 6px !important;
+      bottom:  auto !important;
       right: 16px;
       width: 22px;
       height: 22px;
@@ -176,6 +185,10 @@ header {
     }
     .mobile-close{
       display: none;
+      transition: none;
+      &:hover{
+        filter: brightness(0) saturate(100%) invert(82%) sepia(99%) saturate(1913%) hue-rotate(313deg) brightness(99%) contrast(104%);
+      }
       @include MQ(MQ-980) {
         display: block;
       }
@@ -255,6 +268,9 @@ header {
           text-align: left;
           color: $color-faded-grey;
           display: inline-block;
+          &:hover{
+            color: $color-yellow;
+          }
         }
         ul {
           width: 100%;
@@ -298,6 +314,9 @@ header {
             letter-spacing: normal;
             text-align: left;
             color: $color-white;
+            &:hover{
+              color: $color-yellow;
+            }
             @include MQ(MQ-980) {
               font-size: 20px;
               color: $color-yellow;

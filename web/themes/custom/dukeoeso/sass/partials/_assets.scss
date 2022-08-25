@@ -943,6 +943,9 @@ textarea.input--error {
   right: -24px;
   top: 60vh;
   z-index: 99999;
+  &:hover{
+    background: $color-dark-orange;
+  }
   @include MQ(MQ-980) {
     
       display: none;
