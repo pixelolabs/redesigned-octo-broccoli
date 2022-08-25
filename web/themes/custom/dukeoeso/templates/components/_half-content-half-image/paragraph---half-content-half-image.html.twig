@@ -1,0 +1,19 @@
+<div class="half-content-half-image
+		  	{% if content.field_image_position == 'Left' %}
+		      left-image
+		  {%endif%}
+		  ">
+	<div class="container-885">
+		<div class="outer">
+			<div class="content full-format">
+				{{content|without('field_image', 'field_image_position') }}
+			</div>
+			<div class="image-section">
+				{{content.field_image}}
+				<div class="caption">
+					Floated image caption
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -130,16 +130,38 @@ h6 {
   color: $color-black;
 }
 
-h1,
-.h1 {
-  font-size: 56px;
-font-weight: 800;
-line-height: normal;
-letter-spacing: normal;
-text-transform:capitalize;
-@include MQ(MQ-480) {
-  font-size: 40px;
+
+h1 {
+  font-size: 38px;
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 0.61;
+  letter-spacing: normal;
+  text-align: left;
+  color: #414042;
+  @include MQ(MQ-480) {
+    font-size: 40px;
+  }
+  // &::after{
+  //   content:'';
+  //   position: absolute;
+  //   background-color: blue;
+  //   width: 30%;
+  //   height: 3px;
+  //   bottom: 0;
+  //   left:0;
+    
+  // }
 }
+.h1-big {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  @include MQ(MQ-480) {
+    font-size: 40px;
+  }
 }
 
 h2,
@@ -453,7 +475,7 @@ ol {
   max-width: 100%;
   margin: 0 auto;
   width: 100%;
-  padding: 200px 0;
+  padding: 300px 0 100px;
 
 
 }
@@ -462,15 +484,6 @@ ol {
 .container-1920 {
   width: 100%;
   max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 30px;
-  @include MQ(MQ-768) {
-    padding: 0 20px;
-  }
-}
-.container-1260 {
-  width: 100%;
-  max-width: 1260px;
   margin: 0 auto;
   padding: 0 30px;
   @include MQ(MQ-768) {
@@ -555,6 +568,22 @@ ol {
     padding: 0 30px;
   }
 }
+.container-1380 {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.container-1260 {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @include MQ(MQ-768) {
+    padding: 0 20px;
+  }
+}
+
 .container-920 {
   width: 100%;
   max-width: 920px;
@@ -581,12 +610,7 @@ ol {
 }
 
 
-.container-1380 {
-  width: 100%;
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
+
 
 .container-760 {
   width: 100%;

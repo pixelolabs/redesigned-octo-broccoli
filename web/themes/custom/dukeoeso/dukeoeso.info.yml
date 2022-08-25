@@ -7,11 +7,10 @@ libraries:
 base theme: classy
 screenshot: fluffiness.png
 regions:
+  global: 'Global'
   header: 'Header'
   navigation: 'Navigation'
   content: 'Main Content'
-  footer: 'Footer'
   sidebar: 'Sidebar'
-  
-  not_used: 'Not Used'
-  error_content: 'Error Main Content'
+  footer: 'Footer'
+  # error_content: 'Error Main Content'

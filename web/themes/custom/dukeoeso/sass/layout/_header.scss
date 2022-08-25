@@ -11,14 +11,13 @@ header {
   margin: 0 auto;
   width: 100%;
   padding-right: 110px;
+  background: $color-light-black;
   @include MQ(MQ-980) {
     padding-right: 80px;
     padding-top: 10px;
   }
   
-  &.black-bg {
-    background: $color-light-black;
-  }
+
   .container-1805 {
     justify-content: space-between;
   }
@@ -158,7 +157,7 @@ header {
       left: 0;
       margin: 0;
       z-index: 12;
-      padding: 60px 30px;
+      padding: 20px 30px 60px;
       padding-right:100px;
       @include MQ(MQ-480) {
       padding-right:60px;
@@ -187,6 +186,7 @@ header {
       display: flex;
       @include MQ(MQ-980) {
         flex-direction: column;
+        padding-top: 40px;
       }
       &::before {
         left: 0;

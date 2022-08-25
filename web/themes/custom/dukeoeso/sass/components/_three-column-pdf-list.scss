@@ -29,6 +29,9 @@
         width: 24.106% ;
         margin-right: 13.84%;
         margin-bottom: 111px;
+        span{
+          background-image: none;
+        }
         @include MQ(MQ-1200) {
             width: 33.333% ;
             margin-right: 0;

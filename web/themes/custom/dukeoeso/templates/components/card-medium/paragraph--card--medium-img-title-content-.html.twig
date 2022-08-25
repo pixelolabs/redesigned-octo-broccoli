@@ -1,6 +1,6 @@
 <li>
 	{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|striptags}}">
+		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|render|striptags}}">
 			{%endif%}
 			<div class="image-section">
 				{{content.field_media_img}}
