@@ -1,6 +1,24 @@
 
 
 jQuery(function () {
+
+  /*Sidebar*/
+  $(".js__section-navigation-link").on("click", function () {
+ 
+    $(this).toggleClass("active");
+    $(".js__section-navigation").toggleClass("active");
+  })
+  $(".js__section-navigation").children("ul").children("li").children("a").on("click", function () {
+    if($(this).parent("li").children(".submenu").css("display")=="none")
+    {
+      $(this).parent("li").children(".submenu").slideDown();
+    }
+    else
+    {
+      $(this).parent("li").children(".submenu").slideUp();
+    }
+    
+  })
     /* SLIDER */
   
     var heroSlider = new Swiper(".js__hero-banner-slider", {
@@ -69,5 +87,11 @@ jQuery(function () {
       $(".js__top-alert-notification").hide();
       $('.js__main-header').css("top","0");
     })
+
+
+    
+
+
+    
   })
 
