@@ -41,7 +41,6 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.28;
-
   overflow-x: hidden;
 }
 
@@ -93,18 +92,14 @@ li {
 ::selection {
   background: $color-black;
 }
+
 p {
   font-family: $font-family-primary;
   font-size: 19px;
   font-weight: normal;
   line-height: 1.21;
   letter-spacing: normal;
-  
 }
-
-
-
-
 
 a {
   font-family: $font-family-primary;
@@ -114,10 +109,8 @@ a {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 500; 
+  font-weight: 500;
 }
-
-
 
 /****** HEADINGS ******/
 h1,
@@ -130,7 +123,6 @@ h6 {
   color: $color-black;
 }
 
-
 h1 {
   font-size: 38px;
   font-weight: normal;
@@ -139,7 +131,6 @@ h1 {
   letter-spacing: normal;
   text-align: left;
   color: #414042;
-  
   // &::after{
   //   content:'';
   //   position: absolute;
@@ -148,15 +139,18 @@ h1 {
   //   height: 3px;
   //   bottom: 0;
   //   left:0;
-    
   // }
+
+ 
 }
+
 .h1-big {
   font-size: 56px;
   font-weight: 800;
   line-height: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+
   @include MQ(MQ-480) {
     font-size: 40px;
   }
@@ -167,16 +161,16 @@ h2,
   font-weight: normal;
   font-size: 32px;
   line-height: normal;
-  letter-spacing:normal;
-  @include MQ(MQ-480) {
-    font-size: 28px;
-  }
+  letter-spacing: normal;
 
+  @include MQ(MQ-480) {
+    font-size: 28px !important;
+  }
 }
 
-.h2-34
- {
+.h2-34 {
   font-size: 34px;
+
   @include MQ(MQ-480) {
     font-size: 28px;
   }
@@ -187,19 +181,20 @@ h3,
   font-weight: normal;
   font-size: 30px;
   line-height: 1;
-  letter-spacing:normal;
+  letter-spacing: normal;
+
   @include MQ(MQ-480) {
     font-size: 24px;
   }
- 
 }
 
 h4,
 .h4 {
   font-size: 27px;
   font-weight: bold;
-  letter-spacing:normal;
+  letter-spacing: normal;
   line-height: 1.33;
+
   @include MQ(MQ-480) {
     font-size: 22px;
   }
@@ -211,6 +206,7 @@ h5,
   font-weight: bold;
   line-height: 1.25;
   letter-spacing: normal;
+
   @include MQ(MQ-480) {
     font-size: 20px;
   }
@@ -221,6 +217,7 @@ h6 {
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: normal;
+
   @include MQ(MQ-480) {
     font-size: 18px;
   }
@@ -242,20 +239,17 @@ button {
 
 .btn--primary {
   @include px-button;
-  
 }
 
 .btn--secondary {
   @include px-button;
- 
-  
   background: $color-orange;
   color: $color-white !important;
-  &::before{
+
+  &::before {
     border: 2px solid $color-orange;
   }
 }
-
 
 .link--primary {
   font-size: 12px;
@@ -264,14 +258,13 @@ button {
   line-height: normal;
   letter-spacing: 2px;
   color: $color-black;
-  &.white{
+
+  &.white {
     color: $color-white;
   }
-
 }
 
-.link--secondary
-{
+.link--secondary {
   font-size: 19px;
   line-height: 1.21;
   font-weight: normal !important;
@@ -281,11 +274,10 @@ button {
   background: url(../images/Icon-arrow-forward.png) no-repeat center right / 9px;
   padding-right: 18px;
   color: $color-orange;
-  &:hover{
+
+  &:hover {
     filter: brightness(0) saturate(100%) invert(21%) sepia(32%) saturate(5443%) hue-rotate(193deg) brightness(87%) contrast(101%);
   }
-
-  
 }
 
 /* INNER PAGE WITH H1 */
@@ -312,69 +304,64 @@ button {
   font-size: 19px;
   line-height: normal;
 
-h5,h6{
+  h5,
+  h6 {
     margin-bottom: 10px;
-    &:last-child{
-      margin-bottom: 0;
-    }
+
   }
 
-  h2{
+  h2 {
     margin-bottom: 20px;
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
-  
-  h3, h4{
-    margin-bottom: 15px;
-    &:last-child{
-      margin-bottom: 0;
-    }
+
   }
 
-  h2,h4,h6{
+  h3,
+  h4 {
+    margin-bottom: 15px;
+
+  }
+
+  h2,
+  h4,
+  h6 {
     color: $color-blue2;
   }
-  h3,h5{
+
+  h3,
+  h5 {
     color: $color-orange;
   }
-  
 
-  h2{
+  h2 {
     line-height: 1.18;
     font-size: 34px;
   }
 
-  p{
+  p {
     margin-bottom: 20px;
-    &:last-child{
-      margin-bottom: 0;
-    }
-    &:first-child{
+
+    &:first-child {
       margin-top: 20px;
     }
   }
+
   img {
     width: 100%;
     height: auto;
     padding-top: 30px;
   }
+
   a {
-     
-      font-weight: bold;
-      color: $color-blue2;
+    font-weight: bold;
+    color: $color-blue2;
   }
 
-  p{
-    a{
+  p {
+    a {
       font-weight: bold;
       color: $color-blue2;
     }
   }
-
-
- 
 
   blockquote {
     padding: 0;
@@ -383,82 +370,94 @@ h5,h6{
     font-style: normal;
     line-height: 1.33;
     letter-spacing: normal;
-     font-weight: bold;
-     margin-top: 25px;
-     margin-bottom: 38px;
-     color: $color-orange;
-     &:first-child{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 38px;
+    color: $color-orange;
+
+    &:first-child {
       margin-top: 0px;
-     }
-     @include MQ(MQ-480) {
-      font-size: 22px;
-     }
-  }
-
-
-  ul,ol {
-    li {
-        font-size: 19px;
-        line-height: 1.68;
-        letter-spacing: normal;
-        list-style: none;
-        padding-left: 24px;
-        position: relative;
-        &::before {
-            width: 8px;
-            height: 8px;
-            content: "";
-            background: $color-orange;
-            position: absolute;
-            left: 0px;
-            top: 10px;
-            border-radius: 50%;
-        }
     }
-}
 
-ol {
-  li {
-      &::before {
-          width: auto;
-          height: auto;
-          content: counter(list-item)'.';
-          font-weight: bold;
-          color: $color-orange;
-          top: 0;
-          background: transparent;
-
-          border-radius:0;
-      }
+    @include MQ(MQ-480) {
+      font-size: 22px;
+    }
   }
-}
-
-
-
 
   ul,
-  ol{
+  ol {
+    li {
+      font-size: 19px;
+      line-height: 1.68;
+      letter-spacing: normal;
+      list-style: none;
+      padding-left: 24px;
+      position: relative;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        content: "";
+        background: $color-orange;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  ol {
+    li {
+      &::before {
+        width: auto;
+        height: auto;
+        content: counter(list-item)'.';
+        font-weight: bold;
+        color: $color-orange;
+        top: 0;
+        background: transparent;
+        border-radius: 0;
+      }
+    }
+  }
+
+  ul,
+  ol {
     margin-bottom: 20px;
+
     &:last-child {
       margin-bottom: 0px;
     }
-    
   }
 
-  hr{
+  hr {
     width: calc(100% + 156px);
-   
     margin: 100px 0;
     margin-left: -78px;
     border-top: 2px solid $color-orange;
+
     @include MQ(MQ-980) {
       width: 100%;
       margin-left: 0px;
+      margin: 50px 0;
     }
   }
 
-  
- 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  ul,
+  ol,
+  hr {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /****** CONTAINERS ******/
@@ -479,18 +478,22 @@ ol {
   margin: 0 auto;
   width: 100%;
   padding: 300px 0 100px;
+
   @include MQ(MQ-980) {
     padding: 200px 0 100px;
   }
 
+  &.page {
+    padding: 400px 0 180px;
+  }
 }
-
 
 .container-1920 {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 30px;
+
   @include MQ(MQ-768) {
     padding: 0 20px;
   }
@@ -501,6 +504,7 @@ ol {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 60px;
+
   @include MQ(MQ-768) {
     padding: 0 30px;
   }
@@ -511,6 +515,7 @@ ol {
   max-width: 1805px;
   margin: 0 auto;
   padding: 0 30px;
+
   @include MQ(MQ-768) {
     padding: 0 20px;
   }
@@ -521,15 +526,18 @@ ol {
   max-width: 1680px;
   margin: 0 auto;
   padding: 0 60px;
+
   @include MQ(MQ-768) {
     padding: 0 30px;
   }
 }
+
 .container-1620 {
   width: 100%;
   max-width: 1620px;
   margin: 0 auto;
   padding: 0 60px;
+
   @include MQ(MQ-768) {
     padding: 0 30px;
   }
@@ -540,19 +548,23 @@ ol {
   max-width: 1510px;
   margin: 0 auto;
   padding: 0 60px;
+
   @include MQ(MQ-768) {
     padding: 0 30px;
   }
 }
+
 .container-1428 {
   width: 100%;
   max-width: 1428px;
   margin: 0 auto;
   padding: 0 30px;
+
   @include MQ(MQ-768) {
     padding: 0 20px;
   }
 }
+
 .container-1440 {
   width: 100%;
   max-width: 1440px;
@@ -579,21 +591,25 @@ ol {
   max-width: 1350px;
   margin: 0 auto;
   padding: 60px;
+
   @include MQ(MQ-768) {
     padding: 0 30px;
   }
 }
+
 .container-1380 {
   width: 100%;
   max-width: 1380px;
   margin: 0 auto;
   padding: 0 30px;
 }
+
 .container-1260 {
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 30px;
+
   @include MQ(MQ-768) {
     padding: 0 20px;
   }
@@ -611,21 +627,18 @@ ol {
   max-width: 885px;
   margin: 0 auto;
   padding: 0 60px;
+
   @include MQ(MQ-768) {
     padding: 0 30px;
   }
 }
 
-
-.container-810{
+.container-810 {
   width: 100%;
   max-width: 810px;
   margin: 0 auto;
   padding: 0 30px;
 }
-
-
-
 
 .container-760 {
   width: 100%;
@@ -925,78 +938,7 @@ ol {
   padding: 80px;
 }
 
-/* Product */
-.price {
-  display: flex;
-}
-
-.price--unavailable {
-  visibility: hidden;
-}
-
-.price--compare-price-hidden .price__compare {
-  display: none;
-}
-
-.price__pricing-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.price__regular {
-  display: block;
-}
-
-.price--on-sale .price__regular,
-.price--on-sale .price__availability {
-  display: none;
-}
-
-.price__availability {
-  display: none;
-}
-
-.price--sold-out .price__availability {
-  display: block;
-}
-
-.price__sale {
-  display: none;
-}
-
-.price--on-sale .price__sale {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.price__unit {
-  display: none;
-}
-
-.price--unit-available .price__unit {
-  display: block;
-}
-
-.price__badge {
-  display: none;
-}
-
-.price--on-sale .price__badge--sale {
-  display: flex;
-}
-
-.price--sold-out .price__badge--sale {
-  display: none;
-}
-
-.price--sold-out .price__badge--sold-out {
-  display: flex;
-}
-
-
-.sub-heading{
+.sub-heading {
   font-size: 14px;
   line-height: normal;
   letter-spacing: 2px;
@@ -1016,17 +958,19 @@ ol {
   padding-bottom: 24px;
   color: $color-white;
   border-bottom: 2px solid $color-white;
+
   @include MQ(MQ-480) {
-      padding-bottom: 10px;
-      width: calc(100% - 40px);
-      bottom: 20px;
-      left: 20px;
+    padding-bottom: 10px;
+    width: calc(100% - 40px);
+    bottom: 20px;
+    left: 20px;
   }
 }
 
-.generic{
+.generic {
   position: relative;
-  &::before{
+
+  &::before {
     height: 554px;
     width: 100%;
     background: url(../images/bg-graphic.png) no-repeat top left / cover;

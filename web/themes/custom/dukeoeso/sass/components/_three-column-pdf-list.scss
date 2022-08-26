@@ -1,73 +1,71 @@
 .three-column-pdf-list {
-    padding: 73px 0;
-    margin-bottom: -111px;
-    @include MQ(MQ-600) {
-        padding: 60px 0 0;
-        margin-bottom: 0px;
+  padding: 140px 0 0;
+
+  // margin-bottom: -111px;
+  @include MQ(MQ-768) {
+    padding: 80px 0px 0;
+  }
+
+
+  h2 {
+    text-align: center;
+    color: $color-blue2;
+    width: 100%;
+    max-width: 486px;
+    margin: 0 auto;
+  }
+
+  ul {
+    margin-top: 67px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 105px 190px;
+
+    @include MQ(MQ-1200) {
+      gap: 80px;
     }
-    h2 {
-        text-align: center;
+
+    @include MQ(MQ-980) {
+      gap: 60px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include MQ(MQ-480) {
+      gap: 60px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    li {
+      span {
+        background-image: none;
+      }
+
+      @include MQ(MQ-600) {
+        a {
+          font-size: 18px !important;
+        }
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      a {
+        max-width: 375px;
+        background: url(../images/icon-pdf.png) no-repeat top left / 54px;
+        padding-left: 78px;
+        padding-top: 6px;
+        font-size: 19px;
+        display: block;
+        line-height: normal;
+        letter-spacing: normal;
         color: $color-blue2;
-        width: 100%;
-        max-width: 486px;
-        margin: 0 auto;
-    }
-    ul {
-        margin-top: 67px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        @include MQ(MQ-1200) {
-           width: calc(100% + 60px); 
-            margin-left: -60px;
-        }
+        min-height: 63px;
+
         @include MQ(MQ-600) {
-            width: 100%;
-             margin-left: 0px;
-         }
-      li{
-        width: 24.106% ;
-        margin-right: 13.84%;
-        margin-bottom: 111px;
-        span{
-          background-image: none;
-        }
-        @include MQ(MQ-1200) {
-            width: 33.333% ;
-            margin-right: 0;
-            padding-left: 60px;
-        }
-        @include MQ(MQ-980) {
-            width: 50% ;
-           
-        }
-        @include MQ(MQ-600) {
-            width: 100% ;
-            padding-left: 0px;
-            margin-bottom:60px;
-        }
-       
-        &:nth-child(3n)
-        {
-            margin-right: 0;
-        }
-        a{
-            max-width: 375px;
-            background: url(../images/icon-pdf.png) no-repeat top left / 54px;
-            padding-left: 78px;
-            padding-top: 6px;
-            font-size: 19px;
-            display: block;
-            line-height: normal;
-            letter-spacing: normal;
-            color: $color-blue2;
-            min-height: 63px;
-            @include MQ(MQ-600) {
-                max-width: 100%;
-            }
+          max-width: 100%;
         }
       }
     }
-
-    
+  }
 }
