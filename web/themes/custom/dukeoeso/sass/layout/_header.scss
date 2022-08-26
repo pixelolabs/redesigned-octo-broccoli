@@ -298,6 +298,10 @@ header {
             letter-spacing: normal;
             text-align: left;
             color: $color-white;
+            @include MQ(MQ-980) {
+              min-width: 240px;
+              display: inline-block;
+            }
             &:hover {
               color: $color-yellow;
             }
