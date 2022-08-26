@@ -43,6 +43,7 @@ jQuery(function () {
       else sticky.removeClass('fixed');
     });
 
+    $(".js__accordian").children("li:first-child").addClass("active");
 /*Accrodian*/
     $(".js__accordian")
     .children("li")
@@ -84,8 +85,9 @@ jQuery(function () {
 
     /*Top alert close*/
     $(".js__top-alert-notification-close").on("click", function () {
-      $(".js__top-alert-notification").hide();
       $('.js__main-header').css("top","0");
+      $('.wrapper').addClass("alert-hide");
+      $('.js__top-alert-notification').addClass("alert-hide");
     })
 
 

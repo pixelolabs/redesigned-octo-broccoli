@@ -1,5 +1,8 @@
 .page-title-section {
     padding: 50px 0 0px;
+    &.sidebar{
+        padding: 0;
+    }
     h1 {
         padding-bottom: 17px;
         position: relative;
@@ -16,6 +19,9 @@
     }
     .breadcrumbs {
         margin-top: 15px;
+        .breadcrumb{
+            padding-bottom: 0;
+        }
         li {
             font-size: 17px;
             font-weight: normal;
@@ -43,16 +49,30 @@
     .left-sidebar {
         position: relative;
         z-index: 4;
-        margin-top: 20px;
+        margin-top: 34px;
+       
+       
+        @include MQ(MQ-1440) {
+           min-height: 61px;
+        }
         .section-navigation-link {
             padding-left: 80px;
-            position: relative;
+            
+            min-height: 27px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
             z-index: 4;
             svg {
                 position: absolute;
                 left: 0;
                 right: 0;
                 transition: 0.35s ease-out;
+                path{
+                    stroke-width: 1em;
+                }
             }
             &:hover{
                 color: $color-light-black !important;
@@ -97,7 +117,7 @@
                         font-weight: bold;
                         color: $color-blue2;
                         line-height: normal;
-                        padding: 24px 30px 13px;
+                        padding: 24px 0px 13px 30px;
                         display: inline-block;
                         position: relative;
                         &:hover{

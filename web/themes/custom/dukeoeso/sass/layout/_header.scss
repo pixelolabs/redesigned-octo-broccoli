@@ -11,6 +11,7 @@ header {
   margin: 0 auto;
   width: 100%;
   padding-right: 110px;
+  transition: 0.35s ease-out;
   background: $color-light-black;
   @include MQ(MQ-980) {
     padding-right: 80px;
@@ -162,7 +163,7 @@ header {
       transform: translateX(100vw);
       overflow-y: auto;
       background: url(../images/submenu-bg.png) no-repeat center/cover;
-      top: -2px;
+      top: -4px;
       left: 0;
       margin: 0;
       z-index: 12;
@@ -392,6 +393,10 @@ header {
   left: 0;
   right: 0;
   z-index: 4;
+  transition: 0.35s ease-out;
+  &.alert-hide{
+    transform: translate(0, -100%);
+  }
   margin: 0 auto;
   @include MQ(MQ-980) {
     padding-right: 0 !important;

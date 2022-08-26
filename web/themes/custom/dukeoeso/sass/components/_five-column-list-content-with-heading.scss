@@ -8,8 +8,11 @@
     position: absolute;
     content: '';
     left: 0;
+    right: 0;
+    margin: 0 auto;
     top: -66px;
     z-index: 1;
+    max-width: 1920px;
   }
 
   @include MQ(MQ-768) {

@@ -479,12 +479,21 @@ button {
   width: 100%;
   padding: 300px 0 100px;
 
+  &.alert-hide{
+    padding-top: 223px;
+  }
   @include MQ(MQ-980) {
     padding: 200px 0 100px;
+    &.alert-hide{
+      padding-top: 123px;
+    }
   }
 
   &.page {
     padding: 400px 0 180px;
+    &.alert-hide{
+      padding-top: 323px;
+    }
   }
 }
 
