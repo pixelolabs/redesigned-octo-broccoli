@@ -1,12 +1,11 @@
-<div class="half-content-half-image
-				  	{% if content.field_image_position == 'Left' %}
-				      left-image
-				  {%endif%}
-				  ">
+{% set imagePosition = content.field_image_position|render|striptags|trim %}
+
+<div class="half-content-half-image {% if imagePosition == 'Left' %} left-image {%endif%}">
 	<div class="container-885">
 		<div class="outer">
 			<div class="content full-format">
-				{{content|without('field_image_position') }}
+      
+				{{content.field_body }}
 			</div>
 			{{content.field_paragraph}}
 		</div>
