@@ -1,4 +1,3 @@
-
 header {
   position: absolute;
   padding-top: 35px;
@@ -17,8 +16,6 @@ header {
     padding-right: 80px;
     padding-top: 10px;
   }
-  
-
   .container-1805 {
     justify-content: space-between;
   }
@@ -49,8 +46,7 @@ header {
       height: 46px;
     }
   }
-
-  .mobile-hamburger{
+  .mobile-hamburger {
     width: 50px;
     display: none;
     height: 50px;
@@ -58,7 +54,7 @@ header {
     top: 15px;
     right: 30px;
     transition: none;
-    &:hover{
+    &:hover {
       filter: brightness(0) saturate(100%) invert(82%) sepia(99%) saturate(1913%) hue-rotate(313deg) brightness(99%) contrast(104%);
     }
     @include MQ(MQ-980) {
@@ -69,25 +65,19 @@ header {
     }
     background: url(../images/icon-hamburger.png) no-repeat center / 50px;
   }
-
-  .mobile-close{
+  .mobile-close {
     width: 37px;
     height: 29px;
     position: absolute;
     top: 20px;
-    
     filter: brightness(0) invert(1);
     right: 30px;
     background: url(../images/icon-cross.png) no-repeat center / 37px;
   }
-  
-
-
-  
   .search-block-form {
     width: 222px;
     position: relative;
-    .form-wrapper{
+    .form-wrapper {
       position: initial !important;
     }
     @include MQ(MQ-980) {
@@ -124,14 +114,13 @@ header {
     input[type="submit"] {
       position: absolute;
       top: 6px !important;
-      bottom:  auto !important;
+      bottom: auto !important;
       right: 16px;
       width: 22px;
       height: 22px;
       font-size: 0px;
       border: none;
       background: url(../images/Icon-search.png) no-repeat center / 22px;
-      
     }
   }
   .menu-section {
@@ -142,24 +131,21 @@ header {
     align-items: flex-end;
     padding-right: 78px;
     position: relative;
-    .report-issue{
+    .report-issue {
       display: none;
     }
-    .search-block-form{
+    .search-block-form {
       display: none;
       @include MQ(MQ-980) {
         display: block;
       }
     }
-    
     @include MQ(MQ-980) {
       display: block;
-     
       position: fixed;
       overflow: auto;
       height: 100%;
       width: 100%;
-     
       transform: translateX(100vw);
       overflow-y: auto;
       background: url(../images/submenu-bg.png) no-repeat center/cover;
@@ -168,26 +154,26 @@ header {
       margin: 0;
       z-index: 12;
       padding: 20px 30px 60px;
-      padding-right:100px;
+      padding-right: 100px;
       @include MQ(MQ-480) {
-      padding-right:60px;
+        padding-right: 60px;
       }
       &.active {
         transition: 0.3s;
         transform: translateX(0);
       }
-      &.inactive{
+      &.inactive {
         transition: 0.3s;
         transform: translateX(100vw);
       }
-      .report-issue{
+      .report-issue {
         display: block;
       }
     }
-    .mobile-close{
+    .mobile-close {
       display: none;
       transition: none;
-      &:hover{
+      &:hover {
         filter: brightness(0) saturate(100%) invert(82%) sepia(99%) saturate(1913%) hue-rotate(313deg) brightness(99%) contrast(104%);
       }
       @include MQ(MQ-980) {
@@ -231,7 +217,6 @@ header {
           width: auto;
           position: relative;
           right: 0;
-          display: block;
           padding: 0px;
           margin-top: 20px;
           margin-left: 20px;
@@ -269,7 +254,7 @@ header {
           text-align: left;
           color: $color-faded-grey;
           display: inline-block;
-          &:hover{
+          &:hover {
             color: $color-yellow;
           }
         }
@@ -285,14 +270,12 @@ header {
           @include MQ(MQ-980) {
             min-height: auto;
             display: block;
-           li{
-            margin-bottom: 20px;
-            &:last-child{
-              margin-bottom: 0px;
+            li {
+              margin-bottom: 20px;
+              &:last-child {
+                margin-bottom: 0px;
+              }
             }
-            
-           }
-
           }
         }
       }
@@ -315,7 +298,7 @@ header {
             letter-spacing: normal;
             text-align: left;
             color: $color-white;
-            &:hover{
+            &:hover {
               color: $color-yellow;
             }
             @include MQ(MQ-980) {
@@ -326,19 +309,13 @@ header {
         }
         &.has-sub {
           &:hover {
-            .sub-menu-wrapper {
-              display: block;
-            }
+           
             .menu-wrapper {
               >a {
                 color: $color-yellow;
                 position: relative;
-                &::after {
                 
-                  width: 10px;
-                  content: '-';
-                }
-                &::before{
+                &::before {
                   width: 51px;
                   height: 11px;
                   position: absolute;
@@ -357,13 +334,17 @@ header {
               padding-right: 15px;
               position: relative;
               &::after {
-                @include MQ(MQ-980) {
-                  display: none;
-                }
                 position: absolute;
                 right: 0;
                 width: 10px;
                 content: '+';
+              }
+              @include MQ(MQ-980) {
+                &.active{
+                  &::after {
+                    content: '-';
+                  }
+                }
               }
             }
           }
@@ -372,20 +353,49 @@ header {
     }
   }
 }
-
-
 @media only screen and (min-width: 981px) {
   header {
-  .menu-section {
-    transition: 0s;
-    transform: translateX(0);
+    .menu-section {
+      transition: 0s;
+      transform: translateX(0);
+    }
+  }
+  header {
+    .menu-section {
+      .nav {
+        >li {
+          .menu-wrapper {
+            >a {
+              &:hover {
+                color: $color-yellow;
+              }
+            }
+          }
+          &.has-sub {
+            .sub-menu-wrapper {
+              display: none !important;
+            }
+            &:hover {
+              .sub-menu-wrapper {
+                display: block !important;
+              }
+              .menu-wrapper {
+                >a {
+                  &::after {
+                    width: 10px;
+                    content: '-';
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
-}
-
-
 /*Notification*/
-.top-alert-notification{
+.top-alert-notification {
   max-width: 1920px;
   position: absolute;
   width: 100%;
@@ -394,57 +404,52 @@ header {
   right: 0;
   z-index: 4;
   transition: 0.35s ease-out;
-  &.alert-hide{
+  &.alert-hide {
     transform: translate(0, -100%);
   }
   margin: 0 auto;
   @include MQ(MQ-980) {
     padding-right: 0 !important;
   }
-  .inner{
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-  min-height: 77px;
-  background: $color-dark-orange;
- 
-
- 
-  p{
-    font-size: 19px;
-    padding-left: 69px;
-    padding-right: 30px;
-line-height: normal;
-color: $color-white;
-background: url(../images/icon-alert-triangle.png) no-repeat center left / 30px;
-@include MQ(MQ-600) {
-  background-size: 20px !important;
-  padding-left: 35px;
-  padding-right: 20px;
-}
-@include MQ(MQ-768) {
-  font-size: 16px;
-}
-@include MQ(MQ-600) {
-  font-size: 14px;
-}
-  }
-  .close{
-    width: 21px;
-    height: 21px;
-    position: absolute;
-    top: 32px;
-    right: 30px;
-    display: block;
-    background: url(../images/icon-cross-small.png) no-repeat center / 21px;
-    @include MQ(MQ-600) {
-      width: 16px;
-      height: 16px;
-      background-size: 16px !important;
+  .inner {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 77px;
+    background: $color-dark-orange;
+    p {
+      font-size: 19px;
+      padding-left: 69px;
+      padding-right: 30px;
+      line-height: normal;
+      color: $color-white;
+      background: url(../images/icon-alert-triangle.png) no-repeat center left / 30px;
+      @include MQ(MQ-600) {
+        background-size: 20px !important;
+        padding-left: 35px;
+        padding-right: 20px;
+      }
+      @include MQ(MQ-768) {
+        font-size: 16px;
+      }
+      @include MQ(MQ-600) {
+        font-size: 14px;
+      }
+    }
+    .close {
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      top: 32px;
+      right: 30px;
+      display: block;
+      background: url(../images/icon-cross-small.png) no-repeat center / 21px;
+      @include MQ(MQ-600) {
+        width: 16px;
+        height: 16px;
+        background-size: 16px !important;
+      }
     }
   }
-
-}
-
 }

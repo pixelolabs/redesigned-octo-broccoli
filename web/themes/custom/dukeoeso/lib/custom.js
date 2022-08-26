@@ -78,9 +78,27 @@ jQuery(function () {
       $(".js__menu-section").addClass("active");
       $(".js__menu-section").removeClass("inactive");
     });
+   
     $(".js__mobilemenu-close").on("click", function () {
       $(".js__menu-section").removeClass("active");
       $(".js__menu-section").addClass("inactive");
+    });
+    
+    $(".js__header-has-sub").children(".menu-wrapper").children("a").on("click", function () {
+      var windowsize = $(window).width();
+        if (windowsize < 981) {
+      if($(this).parent(".menu-wrapper").children(".sub-menu-wrapper").css("display")=="none")
+      {
+        $(this).addClass("active");
+        $(this).parent(".menu-wrapper").children(".sub-menu-wrapper").slideDown();
+       
+      }
+      else
+      {
+      $(this).removeClass("active");
+      $(this).parent(".menu-wrapper").children(".sub-menu-wrapper").slideUp();
+      }
+    }
     });
 
     /*Top alert close*/

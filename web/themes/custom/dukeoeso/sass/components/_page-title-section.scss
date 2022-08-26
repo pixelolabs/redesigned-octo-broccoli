@@ -98,12 +98,14 @@
             }
         }
         .section-navigation {
-            width: 162px;
+           
+            width: 182px;
+            padding:0 10px ;
             position: absolute;
             transition: 0.35s ease-out;
             opacity: 0;
             z-index: 1;
-            left: 76px;
+            left: 66px;
             background: $color-white;
             top: 0;
             &.active{
