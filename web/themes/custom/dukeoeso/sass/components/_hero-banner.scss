@@ -72,16 +72,17 @@
       }
 
       @include MQ(MQ-980) {
-        background: $color-blue !important;
+        background: $color-white !important;
         opacity: 1;
       }
 
       &.swiper-pagination-bullet-active {
         opacity: 1;
-
         @include MQ(MQ-980) {
-          background: $color-dark-blue !important;
+          background: $color-yellow !important;
+         
         }
+       
       }
     }
 

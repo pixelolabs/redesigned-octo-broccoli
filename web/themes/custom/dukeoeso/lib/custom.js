@@ -109,6 +109,62 @@ jQuery(function () {
     })
 
 
+    /*active link while submenu open */
+ 
+    
+    if ($(window).width() > 980) {
+      $(".js__header-has-sub").mouseover(
+        function () {
+          $(this).addClass("active");
+         
+        }
+      );
+      $(".js__header-has-sub").mouseout(
+        function () {
+          $(this).removeClass("active");
+        }
+      );
+      
+    }
+
+    /*Keyboard tabbing*/
+     /*Adding Tab index*/
+      $("a").attr("tabindex", "0");
+
+      $(".js__header-has-sub").find(".primary-item").removeAttr("tabindex");
+      $(".js__header-has-sub").attr("tabindex", "0");
+      if ($(window).width() > 980) {
+      $(".js__header-has-sub").focus(function () {
+        $(".js__header-has-sub").removeClass("active");
+        $(this).addClass("active");
+      });
+      $(".primary-item").focus(function () {
+        $(".js__header-has-sub").removeClass("active");
+      
+      });
+    }
+    else
+    {
+      $(".js__header-has-sub").focus(function () {
+       $(this).children(".menu-wrapper").children("a").click();
+      });
+     
+
+    }
+
+      $(".js__mobile-hamburger").focus(function () {
+        $(".js__menu-section").addClass("active");
+        $(".js__menu-section").removeClass("inactive");
+      });
+     
+      $(".js__mobilemenu-close").focus(function () {
+        $(".js__menu-section").removeClass("active");
+        $(".js__menu-section").addClass("inactive");
+      });
+      
+
+      $(".js__accordian").children("li").children("h6").attr("tabindex", "0");
+
     
 
 

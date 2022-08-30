@@ -24,11 +24,25 @@ header {
     width: 100%;
     align-items: center;
   }
+  .logo-section-outer{
+    span{
+      display: block;
+      margin-top: 5px;
+      color:$color-faded-grey;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: normal;
+      @include MQ(MQ-600) {
+        font-size: 15px;
+      }
+    }
+  }
   .logo-section {
     width: 687px;
     height: 59px;
     flex: none;
     position: relative;
+   
     img {
       @include img-object-contain
     }
@@ -38,11 +52,11 @@ header {
       height: 50px;
     }
     @include MQ(MQ-980) {
-      width: 236px;
+      width: 180px;
       height: 56px;
     }
     @include MQ(MQ-400) {
-      width: 200px;
+      width: 140px;
       height: 46px;
     }
   }
@@ -312,7 +326,7 @@ header {
           }
         }
         &.has-sub {
-          &:hover {
+          &.active {
            
             .menu-wrapper {
               >a {
@@ -379,7 +393,7 @@ header {
             .sub-menu-wrapper {
               display: none !important;
             }
-            &:hover {
+            &.active {
               .sub-menu-wrapper {
                 display: block !important;
               }

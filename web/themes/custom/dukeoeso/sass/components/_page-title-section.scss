@@ -113,8 +113,19 @@
             background: $color-white;
             top: 0;
             &.active{
+              opacity: 1 !important;
+          }
+            @include MQ(MQ-1440) {
+              position: relative;
+              opacity: 1 !important;
+              display: none;
+              margin-bottom: 30px;
+              &.active{
                 opacity: 1 !important;
+                display: block;
             }
+            }
+            
             >ul {
                 >li {
                     border-bottom: 2px solid $color-blue2;
