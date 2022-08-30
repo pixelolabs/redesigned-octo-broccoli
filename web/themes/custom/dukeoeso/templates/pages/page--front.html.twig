@@ -44,50 +44,26 @@
  */
 #}
 {{ page.global }}
-<header class="js__main-header">
-	<div class="container-1805 flex">
-		<div class="top-section flex">
-			<div class="logo-section none-980">
-				<a><img src="/{{ directory }}/images/logo.png"/></a>
-			</div>
-			<div class="logo-section-outer block-980">
-				<a><div class="logo-section"><img src="/{{ directory }}/images/logo-duke-health.png"/></div>
-        <span>Occupational & Environmental Safety Office</span>
-        </a>
-			</div>
-			{{ page.header }}
-		</div>
-	</div>
-  	<a class="mobile-hamburger js__mobile-hamburger"></a>
-	<div class="menu-section js__menu-section">
-  {{ page.navigation}}
-		<a class="report-issue" href="#">Report an Issue</a>
-		<a class="mobile-close js__mobilemenu-close"></a>
-		
-	</div>
-
-</div></header><div class="wrapper">
-{{ page.content }}</div>{{page.footer}}
-
-
+{{ page.header }}
+<div class="wrapper">
+	{{ page.content }}</div>
+{{page.footer}}
 <style>
-.wrapper {
-    padding:0;
-}
-
-header{
-  background: transparent;
-}
-.top-alert-notification{
-  padding-right: 110px !important;
-}
-.wrapper.alert-hide{
-  padding:0px;
-}
-@media (max-width: 980px)
-{
- .top-alert-notification{
-  padding-right: 0 !important;
-} 
-}
+	.wrapper {
+		padding: 0;
+	}
+	header {
+		background: transparent;
+	}
+	.top-alert-notification {
+		padding-right: 110px !important;
+	}
+	.wrapper.alert-hide {
+		padding: 0;
+	}
+	@media(max-width: 980px) {
+		.top-alert-notification {
+			padding-right: 0 !important;
+		}
+	}
 </style>

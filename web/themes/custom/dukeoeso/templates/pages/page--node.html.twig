@@ -44,30 +44,7 @@
  */
 #}
 {{ page.global }}
-<header class="js__main-header">
-	<div class="container-1805 flex">
-		<div class="top-section flex">
-			<div class="logo-section none-980">
-				<a><img src="/{{ directory }}/images/logo.png" /></a>
-			</div>
-			<div class="logo-section-outer block-980">
-				<a><div class="logo-section"><img src="/{{ directory }}/images/logo-duke-health.png"/></div>
-        <span>Occupational & Environmental Safety Office</span>
-        </a>
-			</div>
-			{{ page.header }}
-		</div>
-	</div>
-    	<a class="mobile-hamburger js__mobile-hamburger"></a>
-	<div class="menu-section js__menu-section">
-  {{ page.navigation}}
-		<a class="report-issue" href="#">Report an Issue</a>
-		<a class="mobile-close js__mobilemenu-close"></a>
-
-	</div>
-	
-	</div>
-</header>
+{{ page.header }}
 <div class="wrapper">
 	<div class="page-title-section">
 		<div class="container-1510">
@@ -77,9 +54,18 @@
 			<div class="breadcrumbs">
 				{{ drupal_breadcrumb() }}
 			</div>
-      
 		</div>
 	</div>
+	{# Page title section ends #}
+	{# Content starts #}
+	{# Custom Sidebar Logic #}
+	{% set has_sidebar = "hide-sidebar" %}
+		{% if 1 in node.field_sidebar_nav_visibility.value %}
+		{{page.sidebar}}
+		{% else %}
+		{# {% set has_sidebar = "show-sidebar" %} #}
+	{% endif %}
 	<div class="generic">
-		{{ page.content }}</div>
-</div>{{page.footer}}
+		{{ page.content }}
+	</div>
+</div></div>{# wrapper ends #}{{page.footer}}

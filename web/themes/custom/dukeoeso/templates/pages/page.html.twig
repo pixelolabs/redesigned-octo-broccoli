@@ -1,4 +1,5 @@
-d{#
+d
+{#
 /**
  * @file
  * Theme override to display a single page.
@@ -44,29 +45,9 @@ d{#
  */
 #}
 {{ page.global }}
-<header class="js__main-header">
-	<div class="container-1805 flex">
-		<div class="top-section flex">
-			<div class="logo-section none-980">
-				<a><img src="/{{ directory }}/images/logo.png"/></a>
-			</div>
-			<div class="logo-section-outer block-980">
-				<a><div class="logo-section"><img src="/{{ directory }}/images/logo-duke-health.png"/></div>
-        <span>Occupational & Environmental Safety Office</span>
-        </a>
-			</div>
-			{{ page.header }}
-		</div>
-	</div>
-  	<a class="mobile-hamburger js__mobile-hamburger"></a>
-	<div class="menu-section js__menu-section">
-			{{ page.navigation}}
-    <a class="report-issue" href="#">Report an Issue</a>
-		<a class="mobile-close js__mobilemenu-close"></a>
-	
-	</div>
-
-</div></header><div class="wrapper page">
-<div class="container-1440 text-center">
-{{ page.content }}</div></div>{{page.footer}}
-
+{{ page.header }}
+<div class="wrapper page">
+	<div class="container-1440 text-center">
+		{{ page.content }}</div>
+</div>
+{{page.footer}}
