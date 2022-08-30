@@ -23,63 +23,52 @@
   We call a macro which calls itself to render the full tree.
   @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
-
-  	<div class="page-title-section sidebar">
-		<div class="container-1510">
-    <div class="left-sidebar">
-    			<a class="section-navigation-link js__section-navigation-link ">
-<svg data-name="Group 229" xmlns="http://www.w3.org/2000/svg" width="27" height="27"  viewBox="0 0 27 27">
-    <path data-name="Rectangle 147" transform="translate(0 13)" style="fill:#085598" stroke-width="2" d="M0 0h27v1H0z"/>
-    <path data-name="Rectangle 148" transform="rotate(90 7 7)" style="fill:#085598" stroke-width="2" d="M0 0h27v1H0z"/>
-</svg>
-[ Sectional Navigation ]</a>
+{# {{ drupal_field('field_sidebar_nav_visibility', 'node', 15) }} #}
+	<div class="page-title-section sidebar"> <div class="container-1510">
+		<div class="left-sidebar">
+			<a class="section-navigation-link js__section-navigation-link ">
+				<svg data-name="Group 229" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewbox="0 0 27 27">
+					<path data-name="Rectangle 147" transform="translate(0 13)" style="fill:#085598" stroke-width="2" d="M0 0h27v1H0z"/>
+					<path data-name="Rectangle 148" transform="rotate(90 7 7)" style="fill:#085598" stroke-width="2" d="M0 0h27v1H0z"/>
+				</svg>
+				[ Sectional Navigation ]</a>
 			<div class="section-navigation js__section-navigation">
 				<ul>
-{{ menus.menu_links(items, attributes, 0) }}
-{% macro menu_links(items, attributes, menu_level) %}
-	{% import _self as menus %}
-
-	{% if items %}
-  
-		{% if menu_level == 0 %}
-    
-				{% else %}
-				{# Do nothing #}
-			{% endif %}
-			{% for item in items %}
-				<li{{item.attributes}} class="{% if item.below %} has-sub {% endif %}">
-					{% if menu_level == 0 %}
-						<a  class="primary-item">
-							{{item.title}}
-						</a>
-					{% else %}
-						{{ link(item.title, item.url) }}
-					{% endif %}
-					{# If there are more levels #}
-					{% if item.below %}
-						{# <h4>{{item.title}}</h4> #}
-						<ul class="submenu">
-							{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-						</ul>
-					{% endif %}
-					{% if menu_level == 0 %}{% endif %}
-				</li>
-			{% endfor %}
-			{% if menu_level == 0 %}
-		
-		{% else %}
-		{# Do nothing #}
-    
-	{% endif %}
-
-{% endif %}
-
-{% endmacro %}
-
-
-
-
-  	</ul>
+					{{ menus.menu_links(items, attributes, 0) }}
+					{% macro menu_links(items, attributes, menu_level) %}
+						{% import _self as menus %}
+						{% if items %}
+							{% if menu_level == 0 %}
+								{% else %}
+								{# Do nothing #}
+							{% endif %}
+							{% for item in items %}
+								<li{{item.attributes}} class="{% if item.below %} has-sub {% endif %}">
+									{% if menu_level == 0 %}
+										<a class="primary-item">
+											{{item.title}}
+										</a>
+									{% else %}
+										{{ link(item.title, item.url) }}
+									{% endif %}
+									{# If there are more levels #}
+									{% if item.below %}
+										{# <h4>{{item.title}}</h4> #}
+										<ul class="submenu">
+											{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+										</ul>
+									{% endif %}
+									{% if menu_level == 0 %}{% endif %}
+								</li>
+							{% endfor %}
+							{% if menu_level == 0 %}
+								{% else %}
+								{# Do nothing #}
+							{% endif %}
+						{% endif %}
+					{% endmacro %}
+				</ul>
+			</div>
 		</div>
-    </div>
-     </div> </div>
+	</div>
+</div>
