@@ -242,10 +242,17 @@ button {
 .btn--secondary {
   @include px-button;
   background: $color-orange;
+ 
   color: $color-white !important;
 
   &::before {
     border: 2px solid $color-orange;
+  }
+  &:hover{
+    background: $color-blue2 !important;
+    &::before {
+      border: 2px solid $color-blue2 !important;
+    }
   }
 }
 

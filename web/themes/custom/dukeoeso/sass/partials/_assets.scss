@@ -941,10 +941,12 @@ textarea.input--error {
   display: inline-block;
   position: fixed;
   right: -24px;
+  border:2px solid $color-white;
   top: 60vh;
   z-index: 99999;
   &:hover{
-    background: $color-dark-orange;
+    background: $color-yellow;
+    color: $color-light-black;
   }
   @include MQ(MQ-980) {
     

@@ -133,16 +133,12 @@ $MQ-1920: 1920px;
     transition: 0.35s ease-out;
   }
   &:hover{
-    background: $color-dark-blue !important;
-    color: $color-white !important;
+    background: $color-white!important;
+ 
     transition: 0.35s ease-out;
     &::before{
-      transition: 0.35s ease-out;
-      width: calc(100% + 1px);
-      height: calc(100% + 1px);
-      left: -1px;
-      top: -1px;
-      border: 1px solid $color-white !important;
+      
+      border: 2px solid $color-white !important;
       
     }
   }
