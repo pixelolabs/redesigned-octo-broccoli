@@ -119,7 +119,7 @@ header {
       line-height: normal;
       letter-spacing: normal;
       text-align: left;
-      color: #b5b5b5;
+      color: $color-light-black;
       &::placeholder {
         color: #b5b5b5;
         opacity: 1;
@@ -135,6 +135,18 @@ header {
       font-size: 0px;
       border: none;
       background: url(../images/Icon-search.png) no-repeat center / 22px;
+    }
+    &:hover{
+      input[type="search"] {
+        &::placeholder {
+        color: $color-light-black;
+        }
+
+      }
+      input[type="submit"] {
+        filter: brightness(0) saturate(100%) invert(29%) sepia(37%) saturate(0%) hue-rotate(335deg) brightness(73%) contrast(97%);
+      }
+
     }
   }
   .menu-section {

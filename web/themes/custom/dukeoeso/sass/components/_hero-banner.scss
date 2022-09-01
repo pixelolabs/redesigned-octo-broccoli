@@ -31,6 +31,9 @@
       display: none;
     }
 
+    &:hover{
+      background-color: $color-light-black !important;
+    }
     right: 55px !important;
     top: 400px !important;
     left: auto !important;

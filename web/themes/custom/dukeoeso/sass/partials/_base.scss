@@ -121,7 +121,7 @@ h6 {
   color: $color-black;
 }
 
-h1 {
+h1, h1 a {
   font-size: 38px;
   font-weight: normal;
   text-transform: capitalize;
@@ -155,7 +155,7 @@ h1 {
 }
 
 h2,
-.h2 {
+.h2, h2 a {
   font-weight: normal;
   font-size: 32px;
   line-height: normal;
@@ -175,7 +175,7 @@ h2,
 }
 
 h3,
-.h3 {
+.h3, h3 a {
   font-weight: normal;
   font-size: 30px;
   line-height: 1;
@@ -187,7 +187,7 @@ h3,
 }
 
 h4,
-.h4 {
+.h4, h4 a {
   font-size: 27px;
   font-weight: bold;
   letter-spacing: normal;
@@ -199,7 +199,7 @@ h4,
 }
 
 h5,
-.h5 {
+.h5,h5 a {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.25;
@@ -210,7 +210,7 @@ h5,
   }
 }
 
-h6 {
+h6, h6 a {
   font-size: 21px;
   font-weight: bold;
   line-height: 1.1;
@@ -329,12 +329,24 @@ button {
   h2,
   h4,
   h6 {
+    a{
+      color: $color-blue2;
+      &:hover{
+        color: $color-orange;
+      }
+    }
     color: $color-blue2;
   }
 
   h3,
   h5 {
     color: $color-orange;
+    a{
+      color: $color-orange;
+      &:hover{
+        color: $color-blue2;
+      }
+    }
   }
 
   h2 {
@@ -357,14 +369,23 @@ button {
   }
 
   a {
-    font-weight: bold;
-    color: $color-blue2;
+  
+    text-decoration: underline;
   }
+
+
 
   p {
     a {
-      font-weight: bold;
-      color: $color-blue2;
+      
+    
+      font-family: $font-family-primary;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: normal;
+  &:hover{
+    color: $color-dark-blue;
+  }
     }
   }
 
@@ -386,6 +407,21 @@ button {
 
     @include MQ(MQ-480) {
       font-size: 22px;
+    }
+  }
+
+  blockquote a{
+    font-size: 27px;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    font-weight: bold;
+    color: $color-orange;
+    @include MQ(MQ-480) {
+      font-size: 22px;
+    }
+    &::hover{
+      color: $color-blue2;
     }
   }
 
@@ -424,6 +460,16 @@ button {
         background: transparent;
         border-radius: 0;
       }
+    }
+  }
+
+  ul li a, ol li a{
+    font-size: 19px;
+    line-height: 1.68;
+    letter-spacing: normal;
+    list-style: none;
+    &:hover{
+      color: $color-dark-blue;
     }
   }
 
@@ -488,7 +534,7 @@ button {
     padding-top: 223px;
   }
   @include MQ(MQ-980) {
-    padding: 200px 0 100px;
+    padding: 200px 0 100px !important;
     &.alert-hide{
       padding-top: 123px;
     }
@@ -994,4 +1040,9 @@ button {
     top: 800px;
     z-index: 1;
   }
+}
+
+
+:focus-visible{
+  outline: 2px solid $color-yellow !important;
 }

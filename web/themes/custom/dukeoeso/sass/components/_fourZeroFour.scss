@@ -1,6 +1,8 @@
 .fourZeroFour{
     text-align: center;
-   
+    @include MQ(MQ-480) {
+      padding-top: 100px;
+    }
     h1{
         color: $color-blue2;
         text-align: center;
@@ -10,5 +12,15 @@
     }
     .btn--primary{
         margin-top: 30px;
+        &:hover{
+          background: $color-dark-blue!important;
+       
+        color: $color-white !important;
+          &::before{
+            
+            border: 2px solid $color-dark-blue !important;
+            
+          }
+        }
     }
 }

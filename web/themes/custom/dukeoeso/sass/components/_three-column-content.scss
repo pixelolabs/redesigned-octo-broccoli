@@ -38,15 +38,18 @@
             font-size: 19px;
             letter-spacing: normal;
             line-height: 1.21;
-            display: inline-flex;
+            display: inline;
             cursor: pointer;
             z-index: 4;
             position: relative;
-            &:hover{
+           
+        }
+        &:hover{
+          p,b{
                
-                background: $color-yellow;
-                
-            }
+            background: $color-yellow;
+            
+        }
         }
         b{
             text-decoration: underline;
