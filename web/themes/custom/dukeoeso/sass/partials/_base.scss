@@ -540,12 +540,12 @@ button {
     }
   }
 
-  &.page {
+  /*&.page {
     padding: 400px 0 180px;
     &.alert-hide{
       padding-top: 323px;
     }
-  }
+  }*/
 }
 
 .container-1920 {
@@ -1029,7 +1029,10 @@ button {
 
 .generic {
   position: relative;
-
+>div{
+  position: relative;
+  z-index: 2;
+}
   &::before {
     height: 554px;
     width: 100%;

@@ -141,6 +141,7 @@
                         &:hover{
                             background: $color-yellow;
                         }
+
                         &::before {
                             width: 8px;
                             height: 8px;
@@ -156,6 +157,25 @@
                             margin-top: -24px;
                            
                         }
+                    }
+                    &.has-sub{
+                      >{
+                        a{
+                          &::after{
+                            content: '+';
+                            color: $color-blue2;
+                            position: absolute;
+                            right: 5px;
+                            top: 25px;
+
+                          }
+                          &.active{
+                            &::after{
+                            content: '-';
+                            }
+                          }
+                        }
+                      }
                     }
                 }
             }

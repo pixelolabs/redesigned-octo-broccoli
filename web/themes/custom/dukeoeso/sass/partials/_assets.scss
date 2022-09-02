@@ -944,6 +944,7 @@ textarea.input--error {
   border:2px solid $color-white;
   top: 60vh;
   z-index: 99999;
+
   &:hover{
     background: $color-yellow;
     color: $color-light-black;
@@ -954,5 +955,12 @@ textarea.input--error {
   }
   @include MQ(MQ-480) {
     right: -60px;
+  }
+}
+
+@media screen and (max-height: 1100px) {
+  .report-issue{
+    top: auto;
+    bottom:calc(25vh + 100px);
   }
 }

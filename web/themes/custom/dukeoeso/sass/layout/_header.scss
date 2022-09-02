@@ -1,5 +1,5 @@
 header {
-  position: absolute;
+  position: fixed;
   padding-top: 35px;
   padding-bottom: 10px;
   top: 77px;
@@ -12,6 +12,9 @@ header {
   padding-right: 110px;
   transition: 0.35s ease-out;
   background: $color-light-black;
+  &.fixed{
+    background: $color-light-black !important;
+  }
   @include MQ(MQ-980) {
     padding-right: 80px;
     padding-top: 10px;
@@ -229,6 +232,8 @@ header {
       .sub-menu-wrapper {
         display: none;
         position: absolute;
+
+       
         width: 927px;
         right: -78px;
         margin-top: 10px;
@@ -286,7 +291,7 @@ header {
         }
         ul {
           width: 100%;
-          min-height: 310px;
+         // min-height: 310px;
           float: none;
           display: grid;
           grid-template-columns: repeat(5, 1fr);
@@ -427,12 +432,15 @@ header {
 /*Notification*/
 .top-alert-notification {
   max-width: 1920px;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  &.fixed{
+    padding-right: 0 !important;
+  }
   top: 0;
   left: 0;
   right: 0;
-  z-index: 4;
+  z-index: 10;
   transition: 0.35s ease-out;
   &.alert-hide {
     transform: translate(0, -100%);
