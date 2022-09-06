@@ -1,7 +1,7 @@
 .fourZeroFour{
     text-align: center;
     @include MQ(MQ-480) {
-      padding-top: 100px;
+      padding-top: 50px;
     }
     h1{
         color: $color-blue2;

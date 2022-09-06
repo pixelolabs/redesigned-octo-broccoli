@@ -14,6 +14,7 @@ header {
   background: $color-light-black;
   &.fixed{
     background: $color-light-black !important;
+    z-index: 14;
   }
   @include MQ(MQ-980) {
     padding-right: 80px;

@@ -55,6 +55,7 @@ footer {
       margin-bottom: 10px;
       @include MQ(MQ-480) {
         justify-content: center;
+        flex-direction: column;
       }
 
       @include MQ(MQ-400) {
@@ -66,6 +67,9 @@ footer {
         margin-bottom: 10px;
         @include MQ(MQ-768) {
           margin-right: 30px;
+        }
+        @include MQ(MQ-480) {
+          margin-right: 0px;
         }
         &:last-child {
           margin-right: 0px;
@@ -89,6 +93,7 @@ footer {
       margin-bottom: -10px;
       @include MQ(MQ-480) {
         justify-content: center;
+      flex-direction: column;
       }
       li {
         margin-right: 45px;
@@ -98,6 +103,9 @@ footer {
           @include MQ(MQ-768) {
             margin-right: 30px;
           }
+        }
+        @include MQ(MQ-480) {
+          margin-right: 0px;
         }
        
         a {

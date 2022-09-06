@@ -28,6 +28,7 @@
 
   .swiper-button-prev-hero-banner,
   .swiper-button-next-hero-banner {
+    z-index: 13 !important;
     width: 55.5px;
     height: 100px;
     background: $color-lignt-blue;
@@ -49,14 +50,14 @@
       display: none;
     }
     @media screen and (max-height: 1100px) {
-      top: 40vh !important;
+      top: 35vh !important;
     }
   }
 
   .swiper-button-prev-hero-banner {
     top: 300px !important;
     @media screen and (max-height: 1100px) {
-      top:calc(40vh - 100px) !important;
+      top:calc(35vh - 100px) !important;
     }
     border-top-right-radius: 50px;
     border-bottom-right-radius: 0px;
@@ -92,7 +93,7 @@
       }
 
       @include MQ(MQ-980) {
-        background: $color-white !important;
+        background: $color-yellow !important;
         opacity: 1;
       }
 
@@ -205,6 +206,10 @@
 
       h2 {
         margin-bottom: 14px;
+
+      @include MQ(MQ-480) {
+        line-height: 1 !important;
+      }
       }
 
       .btn--primary {
