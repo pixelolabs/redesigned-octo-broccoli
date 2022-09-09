@@ -26,11 +26,12 @@
 
           color: $color-white;
           background: url(../images/Icon-plus-white.png) no-repeat top 24px right 35px / 24px $color-blue2;
-       &:hover{
-        background-color: $color-dark-blue;
-        font-weight: bold;
-        text-decoration: underline;
-       }
+
+          &:hover {
+            background-color: $color-dark-blue;
+            font-weight: bold;
+            text-decoration: underline;
+          }
         }
 
         &.active {
@@ -60,9 +61,11 @@
             line-height: normal;
             letter-spacing: normal;
             color: $color-blue2;
-            a{
+
+            a {
               text-decoration: underline;
-              &:hover{
+
+              &:hover {
                 color: $color-orange;
               }
             }
@@ -71,9 +74,13 @@
               font-size: 16px;
             }
           }
-img{    width: 100%;
-  height: auto;
-  margin-top: 20px;}
+
+          img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+          }
+
           ul {
             margin-top: 9px;
 
