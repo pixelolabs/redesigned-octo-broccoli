@@ -22,11 +22,11 @@
 	<div class="container-1805 flex">
 		<div class="top-section flex">
 			<div class="logo-section none-980">
-				<a><img src="/{{ directory }}/images/logo.png"/></a>
+				<a href="{{ url('<front>') }}" rel="home" title="Duke Occupational & Environmental Safety Office"><img src="/{{ directory }}/images/logo.png" alt="Duke Occupational & Environmental Safety Office"></a>
 			</div>
 			<div class="logo-section-outer block-980">
-				<a>
-					<div class="logo-section"><img src="/{{ directory }}/images/logo-duke-health.png"/></div>
+				<a href="{{ url('<front>') }}" rel="home" title="Duke Occupational & Environmental Safety Office">
+					<div class="logo-section"><img src="/{{ directory }}/images/logo-duke-health.png" alt="Duke Occupational & Environmental Safety Office"/></div>
 					<span>Occupational & Environmental Safety Office</span>
 				</a>
 			</div>
@@ -39,7 +39,8 @@
 		class="menu-section js__menu-section">
 		{# navigation #}
 		{{ drupal_region('navigation') }}
-		<a class="report-issue" href="#">Report an Issue</a>
+		<a class="report-issue" href="#" title="Report an Issue">Report an Issue</a>
 		<a class="mobile-close js__mobilemenu-close"></a>
 	</div>
 </div></header><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+

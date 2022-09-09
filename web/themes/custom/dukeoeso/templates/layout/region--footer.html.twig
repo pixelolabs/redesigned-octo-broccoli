@@ -1,26 +1,25 @@
 <footer>
 	<div class="container-1428 flex">
 		<div class="left-section">
-		<div class="logo-section">
-		<div class="logo-section-small">
-				<a><img src="/{{ directory }}/images/logo-duke.png" /></a>
-				
+			<div class="logo-section">
+				<div class="logo-section-small">
+					<a href="https://duke.edu/" title="Duke" target="_blank"><img src="/{{ directory }}/images/logo-duke.png" alt="Duke Education"/></a>
+				</div>
+				<div class="logo-section-big">
+					<a href="https://www.dukehealth.org/" title="Duke Health" target="_blank"><img src="/{{ directory }}/images/logo-duke-health.png" title="Duke Health"/></a>
+				</div>
 			</div>
-			<div class="logo-section-big">
-			
-				<a><img src="/{{ directory }}/images/logo-duke-health.png" /></a>
-			</div>
-			</div>
-			<p>Copyright © 2022 Duke University Health System</p>
+			<p>Copyright ©
+				<script>
+					document.write(new Date().getFullYear())
+				</script>
+				Duke University Health System</p>
 		</div>
 		<div class="right-section">
-		
-        {{content}}
-   
+			{{content}}
 		</div>
 	</div>
 </footer>
 <!-- Swiper JS and CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

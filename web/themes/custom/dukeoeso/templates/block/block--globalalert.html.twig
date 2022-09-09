@@ -1,10 +1,13 @@
-
+{% set content = content.field_body|render|striptags|trim %}
+{% if content is not null and content is not empty %}
 <div class="top-alert-notification js__top-alert-notification">
 	<div class="inner">
 		<div class="container-1800">
-			<p>{{content.field_body}}
+			<p>{{content}}
 			</p>
 		</div>
 		<a class="close js__top-alert-notification-close"></a>
 	</div>
 </div>
+{% endif %}
+  
