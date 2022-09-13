@@ -207,8 +207,11 @@ jQuery(function () {
     }
     else
     {
-      $(".js__header-has-sub").focus(function () {
+      $(".js__header-has-sub").keypress(function(e){
+        if(e.which == 13){
+      //$(".js__header-has-sub").focus(function () {
        $(this).children(".menu-wrapper").children("a").click();
+        }
       });
      
 
@@ -225,6 +228,7 @@ jQuery(function () {
       });
       
 
+      
       $(".js__accordian").children("li").children("h6").attr("tabindex", "0");
 
     
