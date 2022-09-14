@@ -18,7 +18,7 @@ var livereload = require('gulp-livereload')
  * Asset paths.
  */
 const srcSCSS = "./web/themes/custom/dukeoeso/sass/**/*.scss";
-const srcJS = "./web/themes/custom/dukeoeso/lib/*.js";
+const srcJS = "./web/themes/custom/dukeoeso/lib/**/*.js";
 const format = {
   
   custom: {
