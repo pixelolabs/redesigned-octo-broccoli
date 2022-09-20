@@ -15,28 +15,20 @@
 
   .block-outer {
     margin-top: 67px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
     padding: 0 40px;
+
     @include MQ(MQ-480) {
       margin-top: 40px;
     }
 
     .block {
-      width: calc(25% - 111px);
-      margin-right: 148px;
+      width: 100%;
       position: relative;
 
-      @include MQ(MQ-1200) {
-        width: calc(25% - 60px);
-        margin-right: 80px;
-      }
-
       @include MQ(MQ-980) {
-        width: calc(50% - 40px);
-        margin-bottom: 60px;
-        
         &:nth-child(even) {
           margin-right: 0px !important;
 
@@ -50,7 +42,8 @@
         width: 100%;
         margin-right: 0px !important;
         padding-bottom: 30px;
-        margin-bottom: 30px;
+
+        // margin-bottom: 30px;
         &::before {
           display: block !important;
           width: 100% !important;
@@ -66,6 +59,12 @@
 
         &:last-child {
           padding-bottom: 0px;
+        }
+      }
+
+      @include MQ(MQ-480) {
+        &:last-child {
+          padding-bottom: 0px;
 
           &::before {
             display: none !important;
@@ -78,12 +77,16 @@
         background: $color-light-black;
         height: 100%;
         width: 1px;
-        right: -74px;
+        right: -40px;
         position: absolute;
         top: 0;
 
         @include MQ(MQ-1200) {
           right: -40px;
+        }
+
+        @include MQ(MQ-980) {
+          right: -10px;
         }
       }
 
@@ -126,8 +129,19 @@
         }
       }
     }
+
     @include MQ(MQ-980) {
-    padding: 0;
+      padding: 0;
+      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @include MQ(MQ-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include MQ(MQ-480) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
