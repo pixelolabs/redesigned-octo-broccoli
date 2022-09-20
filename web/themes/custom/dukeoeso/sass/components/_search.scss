@@ -5,38 +5,31 @@
   .container-1440 {
     padding: 50px 60px 0;
     max-width: 1024px;
-
     @include MQ(MQ-768) {
       padding: 50px 30px 0;
     }
   }
-
   .messages {
     margin-bottom: 30px;
     line-height: normal;
   }
-
   form {
     .form-actions {
       margin: 0;
     }
-
     max-width: 480px;
     margin: 0 auto;
     margin-bottom: 40px;
-
     >.form-wrapper,
     >.form--inline {
       position: relative;
     }
-
     .form-item {
       width: 100%;
       justify-content: center;
       display: flex;
       flex-direction: column;
       margin: 0;
-
       label {
         font-size: 38px;
         font-weight: normal;
@@ -49,11 +42,9 @@
         margin-bottom: 20px;
       }
     }
-
     .search-help-link {
       display: none;
     }
-
     input[type="search"],
     input[type="text"] {
       width: 100%;
@@ -71,13 +62,11 @@
       letter-spacing: normal;
       text-align: left;
       color: $color-light-black;
-
       &::placeholder {
         color: #b5b5b5;
         opacity: 1;
       }
     }
-
     input[type="submit"] {
       position: absolute;
       bottom: 10px;
@@ -89,12 +78,10 @@
       background: url(../images/Icon-search.png) no-repeat center / 22px;
     }
   }
-
   .search-results {
     li {
       text-align: left;
       margin-bottom: 20px;
-
       h3 a {
         font-size: 27px;
         font-weight: bold;
@@ -102,26 +89,21 @@
         line-height: 1.33;
         color: $color-blue2;
         text-decoration: underline;
-
         &:hover {
           color: $color-orange;
         }
       }
-
       p {
         padding-top: 10px;
       }
-
       .search-result__info {
         display: none;
       }
     }
   }
-
   .items {
     text-align: left;
     margin-bottom: 20px;
-
     h4 a {
       font-size: 27px;
       font-weight: bold;
@@ -129,28 +111,22 @@
       line-height: 1.33;
       color: $color-blue2;
       text-decoration: underline;
-
       &:hover {
         color: $color-orange;
       }
     }
-
     p {
       padding-top: 10px;
     }
   }
 }
-
 .search-view form {
   padding-bottom: 60px;
 }
-
 .path-documents .view-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 1200px;
-
   .views-row a {
     max-width: 375px;
     background: url(../images/icon-pdf.png) no-repeat top left/54px;
@@ -164,13 +140,5 @@
     color: #00539b;
     min-height: 63px;
     text-transform: capitalize;
-  }
-
-  @include MQ(MQ-768) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include MQ(MQ-480) {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
