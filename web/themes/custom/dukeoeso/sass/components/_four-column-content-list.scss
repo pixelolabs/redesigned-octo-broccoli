@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    padding: 0 40px;
     @include MQ(MQ-480) {
       margin-top: 40px;
     }
@@ -36,7 +36,7 @@
       @include MQ(MQ-980) {
         width: calc(50% - 40px);
         margin-bottom: 60px;
-
+        
         &:nth-child(even) {
           margin-right: 0px !important;
 
@@ -125,6 +125,9 @@
           }
         }
       }
+    }
+    @include MQ(MQ-980) {
+    padding: 0;
     }
   }
 }

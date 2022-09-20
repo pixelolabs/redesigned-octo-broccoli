@@ -19,8 +19,8 @@
     margin-top: 67px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 105px 190px;
-
+    gap: 80px;
+    padding: 0 40px;
     @include MQ(MQ-1200) {
       gap: 80px;
     }
@@ -28,6 +28,7 @@
     @include MQ(MQ-980) {
       gap: 60px;
       grid-template-columns: repeat(2, 1fr);
+      padding: 0;
     }
 
     @include MQ(MQ-480) {
