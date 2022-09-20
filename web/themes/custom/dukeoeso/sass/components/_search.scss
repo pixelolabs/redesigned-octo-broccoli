@@ -126,6 +126,7 @@
 .path-documents .view-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 80px;
   max-width: 1200px;
   .views-row a {
     max-width: 375px;
