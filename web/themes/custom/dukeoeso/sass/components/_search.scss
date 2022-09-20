@@ -1,4 +1,4 @@
-.path-search,.search-view,.path-document-library {
+.path-search,.search-view,.path-document-library, .path-documents {
   .container-1440 {
     padding: 50px 60px 0;
     max-width: 1024px;
@@ -139,6 +139,26 @@
 
 
 
-.view--search form{
+.search-view form{
   padding-bottom: 60px;
+}
+
+.path-documents .view-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 105px 190px;
+  .views-row a{
+    max-width: 375px;
+      background: url(../images/icon-pdf.png) no-repeat top left/54px;
+      padding-left: 78px;
+      padding-top: 6px;
+      font-size: 19px;
+      display: block;
+      text-align: left;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #00539b;
+      min-height: 63px;
+      text-transform: capitalize;
+  }
 }
