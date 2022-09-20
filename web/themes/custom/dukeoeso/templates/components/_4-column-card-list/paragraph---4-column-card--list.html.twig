@@ -1,3 +1,14 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
 <div class="four-column-content-list">
 	<div class="container-1680">
 		<h2 class="h2-34">{{content.field_section_title}}</h2>
@@ -6,3 +17,6 @@
 		</div>
 	</div>
 </div>
+	{% endblock %}
+	</div>
+{% endblock paragraph %}

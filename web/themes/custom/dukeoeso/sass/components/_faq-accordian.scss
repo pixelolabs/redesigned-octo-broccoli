@@ -81,7 +81,7 @@
             margin-top: 20px;
           }
 
-          ul {
+          ul, ol {
             margin-top: 9px;
 
             li {
@@ -108,6 +108,21 @@
               }
             }
           }
+
+  ol {
+    li {
+      &::before {
+        width: auto;
+        height: auto;
+        content: counter(list-item)'.';
+        font-weight: bold;
+        color: $color-blue2;
+        top: 0;
+        background: transparent;
+        border-radius: 0;
+      }
+    }
+  }
         }
 
         &.active {

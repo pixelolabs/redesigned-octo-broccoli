@@ -1,3 +1,14 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
 {% set imagePosition = content.field_image_position|render|striptags|trim %}
 
 <div class="half-content-half-image {% if imagePosition == 'Left' %} left-image {%endif%}">
@@ -11,3 +22,6 @@
 		</div>
 	</div>
 </div>
+	{% endblock %}
+	</div>
+{% endblock paragraph %}

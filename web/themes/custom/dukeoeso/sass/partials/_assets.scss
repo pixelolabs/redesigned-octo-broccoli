@@ -949,6 +949,10 @@ textarea.input--error {
     background: $color-yellow;
     color: $color-light-black;
   }
+  @include MQ(MQ-1280) {
+    
+    right: -60px;
+}
   @include MQ(MQ-980) {
     
       display: none;

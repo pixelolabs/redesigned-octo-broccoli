@@ -1,5 +1,15 @@
 {% extends 'paragraph.html.twig' %}
-{% block content %}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
 	<div class="five-column-list-content-with-heading">
 		<div class="container-1920">
 			<h2 class="text-center">
@@ -11,4 +21,7 @@
 			</div>
 		</div>
 	</div>
-{% endblock content %}
+
+	{% endblock %}
+	</div>
+{% endblock paragraph %}
