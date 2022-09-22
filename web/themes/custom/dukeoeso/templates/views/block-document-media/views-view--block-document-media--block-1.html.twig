@@ -35,9 +35,7 @@
 	{{ title }}
 {% endif %}
 {{ title_suffix }}
-{% if header %}
-	{{ header }}
-{% endif %}
+
 {% if exposed %}
 	<div class="view-filters">
 		{{ exposed }}
@@ -51,10 +49,12 @@
 {# Note that this needs to be rendered even when there aren't search results, so rendering it outside of the rows section. #}
 {# {{ drupal_block('views_exposed_filter_block:blog_content_search-page_1', {'label_display': 'hidden'}) }} #}
 	<div class="three-column-pdf-list"> <div class="container-1680">
-		<h2 class="h2-34">Documents</h2>
+		<h2 class="h2-34">{% if header %}
+	{{ header }}
+{% endif %}</h2>
 		<ul>
 			{% if rows %}
-				{{ rows }}
+			{{ rows }}
 			{% elseif empty %}
 				{{ empty }}
 			{% endif %}
