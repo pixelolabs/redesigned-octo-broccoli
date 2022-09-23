@@ -10,6 +10,7 @@ regions:
   global: 'Global'
   header: 'Header'
   navigation: 'Navigation'
+  control: 'Page Control'
   content: 'Main Content'
   sidebar: 'Sidebar'
   footer: 'Footer'
