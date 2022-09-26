@@ -30,6 +30,7 @@
  * @see template_preprocess_views_view()
  */
 #}
+{% if rows %}
 {{ title_prefix }}
 {% if title %}
 	{{ title }}
@@ -81,4 +82,7 @@
 	<div class="feed-icons">
 		{{ feed_icons }}
 	</div>
+{% endif %}
+
+
 {% endif %}
