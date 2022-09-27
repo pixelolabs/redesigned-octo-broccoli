@@ -13,5 +13,6 @@ regions:
   control: 'Page Control'
   content: 'Main Content'
   sidebar: 'Sidebar'
+  filter: 'Filters'
   footer: 'Footer'
   # error_content: 'Error Main Content'
