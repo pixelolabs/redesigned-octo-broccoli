@@ -125,6 +125,11 @@
       }
     }
   }
+
+.form-item, .form-actions {
+
+  text-align: left;
+}
 }
 
 input[type="text"]::-ms-clear {
