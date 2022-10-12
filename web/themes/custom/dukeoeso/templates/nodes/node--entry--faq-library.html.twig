@@ -3,15 +3,7 @@
 {# {{content.field_content}} #}
 {# {{content.field_content.entity.tid.value}} #}
 {{content.field_paragraph}}
+<div class="custom-view">
 {{ drupal_view('block_document_media', 'block_1',node.id) }}
 {{ drupal_view('faq', 'block_1',node.id) }}
-
-	<style>
-.faq-accordian {
-	padding-top: 140px !important;
-}
-.full-width-content {
-	{
-		{# padding-top: 140px; #}
-	}
-}</style>
+</div>
