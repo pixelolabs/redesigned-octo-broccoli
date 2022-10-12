@@ -7,6 +7,9 @@
   div.half {
     margin-right: 15px;
     width: 49%;
+    @include MQ(MQ-768) {
+      width: 100%;
+    }
   }
   div.half:last-of-type {
     margin-right: 0;
