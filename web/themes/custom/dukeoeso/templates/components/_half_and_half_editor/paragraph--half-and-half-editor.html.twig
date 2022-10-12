@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			<div class="half-and-half full-format">
+      	<div class="container-885 flex">
+				<div class="half">
+					{{content.field_body}}
+				</div>
+       <div class="half">
+					{{content.field_half_half_editor_rght_body}}
+				</div>
+			</div>
+      </div>
+		{% endblock %}
+	</div>
+{% endblock paragraph %}
+

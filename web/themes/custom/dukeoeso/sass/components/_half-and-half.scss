@@ -1,0 +1,19 @@
+.half-and-half {
+  padding: 0;
+  overflow: hidden;
+  &.no-padding {
+    padding: 17px 0 0;
+  }
+  div.half {
+    margin-right: 15px;
+    width: 49%;
+  }
+  div.half:last-of-type {
+    margin-right: 0;
+  }
+  .container-885 {
+    @include MQ(MQ-768) {
+      flex-direction: column;
+    }
+  }
+}

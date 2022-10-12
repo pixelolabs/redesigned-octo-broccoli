@@ -680,7 +680,11 @@ button {
   width: 100%;
   max-width: 920px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 60px;
+
+  @include MQ(MQ-768) {
+    padding: 0 20px;
+  }
 }
 
 .container-885 {
