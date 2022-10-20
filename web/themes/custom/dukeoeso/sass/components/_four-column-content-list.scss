@@ -44,10 +44,10 @@
       width: 25%;
       padding-left: 80px;
       position: relative;
-      @include MQ(MQ-1200) {
+      @include MQ(MQ-980) {
         padding-left: 40px;
       }
-      @include MQ(MQ-980) {
+      @include MQ(MQ-1200) {
         margin-bottom: 40px;
         width: 50%;
         &:nth-child(even) {
