@@ -47,7 +47,7 @@
       @include MQ(MQ-980) {
         padding-left: 40px;
       }
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         margin-bottom: 40px;
         width: 50%;
         &:nth-child(even) {
