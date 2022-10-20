@@ -15,20 +15,41 @@
 
   .block-outer {
     margin-top: 67px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 80px;
-    padding: 0 40px;
-
+    //display: grid;
+    display: flex;
+    flex-wrap: wrap;
+   // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    //gap: 80px;
+    width: calc(100% + 80px);
+    margin-left: -80px;
+    justify-content: center;
+    //padding: 0 40px;
+    @include MQ(MQ-980) {
+      width: calc(100% + 40px);
+    margin-left: -40px;
+    }
+    
+    @include MQ(MQ-768) {
+      margin-bottom: -40px;
+    }
+    @include MQ(MQ-600) {
+      width: 100%;
+    margin-left: 0px;
+    }
     @include MQ(MQ-480) {
       margin-top: 40px;
     }
 
     .block {
-      width: 100%;
+      width: 25%;
+      padding-left: 80px;
       position: relative;
-
       @include MQ(MQ-980) {
+        padding-left: 40px;
+      }
+      @include MQ(MQ-768) {
+        margin-bottom: 40px;
+        width: 50%;
         &:nth-child(even) {
           margin-right: 0px !important;
 
@@ -38,10 +59,12 @@
         }
       }
 
-      @include MQ(MQ-768) {
+
+      @include MQ(MQ-600) {
         width: 100%;
         margin-right: 0px !important;
         padding-bottom: 30px;
+        padding-left: 0;
 
         // margin-bottom: 30px;
         &::before {
@@ -86,7 +109,7 @@
         }
 
         @include MQ(MQ-980) {
-          right: -10px;
+          right: -20px;
         }
       }
 
@@ -130,7 +153,7 @@
       }
     }
 
-    @include MQ(MQ-980) {
+   /* @include MQ(MQ-980) {
       padding: 0;
       gap: 40px;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -142,6 +165,6 @@
 
     @include MQ(MQ-480) {
       grid-template-columns: repeat(1, 1fr);
-    }
+    }*/
   }
 }

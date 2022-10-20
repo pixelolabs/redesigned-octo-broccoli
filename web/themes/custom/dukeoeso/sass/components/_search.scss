@@ -22,8 +22,8 @@
     }
 
     max-width: 480px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    
+    margin-bottom: 0px;
 
     >.form-wrapper,
     >.form--inline {
@@ -36,7 +36,7 @@
       display: flex;
       flex-direction: column;
       margin: 0;
-
+      
       label {
         font-size: 38px;
         font-weight: normal;
@@ -44,9 +44,21 @@
         line-height: 1.37;
         letter-spacing: normal;
         text-align: left;
-        color: $color-blue2;
-        text-align: center;
+        color: $color-black;
+        text-align: left;
         margin-bottom: 20px;
+        padding-bottom: 17px;
+        position: relative;
+        display: block;
+        &::before {
+          width: 63px;
+          height: 4px;
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $color-yellow;
+      }
       }
     }
 
@@ -142,7 +154,7 @@
 }
 
 .search-view form {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .path-documents .view-content {
@@ -169,7 +181,7 @@
 
 /* search documents page */
 .path-search-documents .container-1440 {
-  padding: 50px 60px;
+  padding: 20px 60px 50px;
   display: flex;
 
   @include MQ(MQ-980) {
@@ -180,8 +192,20 @@
 
   .three-column-pdf-list {
     padding-top: 0 !important;
+    .container-1680{
+      padding: 0;
+    }
     ul {
-      grid-template-columns: repeat(2, 1fr);
+      margin-left: -40px;
+      margin-top: 0;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include MQ(MQ-980) {
+        margin-left: 0;
+      }
+      @include MQ(MQ-1200) {
+        grid-template-columns: repeat(2, 1fr);
+      }
       @include MQ(MQ-480) {
         grid-template-columns: repeat(1, 1fr);
       }
