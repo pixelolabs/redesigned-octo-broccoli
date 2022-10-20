@@ -23,7 +23,7 @@
 
     max-width: 480px;
     
-    margin-bottom: 0px;
+    margin-bottom: 40px;
 
     >.form-wrapper,
     >.form--inline {
@@ -153,9 +153,7 @@
   }
 }
 
-.search-view form {
-  padding-bottom: 40px;
-}
+
 
 .path-documents .view-content {
   display: grid;
