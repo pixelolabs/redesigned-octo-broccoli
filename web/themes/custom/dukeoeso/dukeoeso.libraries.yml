@@ -5,6 +5,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      'https://alertbar.oit.duke.edu/sites/all/themes/blackwell/css/alert.css': { type: external }
 
 # pagination:
 #   js:
