@@ -30,10 +30,20 @@
  * @see template_preprocess_views_view()
  */
 #}
-
+<a class="section-navigation-link js__section-navigation-link ">
 {% if title %}
-  {# <h3>{{ title }}</h3> #}
+
+	{{title}}
+  
 {% endif %}
+
+{% if header %}
+	{{ header }}
+{% endif %}
+</a>
+
+	<div class="section-navigation js__section-navigation">
+				<ul>
 {% for row in rows %}
   {%
     set row_classes = [
@@ -44,3 +54,5 @@
    	{{ rows }}
   
 {% endfor %}
+		</ul>
+			</div>

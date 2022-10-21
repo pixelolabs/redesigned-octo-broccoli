@@ -1050,6 +1050,17 @@ video{
 
 .generic {
   position: relative;
+  .paragraph{
+    &:first-child{
+      >div{
+        padding-top: 0px;
+        >div{
+          padding-top: 0px;
+        }
+      }
+    }
+    
+  }
 >div{
   position: relative;
   z-index: 2;

@@ -66,6 +66,7 @@
       top: 0;
       left: 0;
       z-index: 4;
+      width: 250px;
       &::before {
         position: absolute;
         left: 0;
@@ -132,6 +133,7 @@
             display: inline-block;
             position: relative;
             width: 100%;
+            text-transform: capitalize;
             &:hover {
               background: $color-yellow;
             }
@@ -187,6 +189,7 @@
             padding: 0px 0px 0px 18px;
             display: inline-block;
             position: relative;
+            text-transform: capitalize;
             &:hover {
               color: $color-orange;
             }
