@@ -31,28 +31,22 @@
  */
 #}
 <a class="section-navigation-link js__section-navigation-link ">
-{% if title %}
-
-	{{title}}
-  
-{% endif %}
-
-{% if header %}
-	{{ header }}
-{% endif %}
+	{% if title %}
+		{{title}}
+	{% endif %}
+	{% if header %}
+		{{ header }}
+	{% endif %}
 </a>
-
-	<div class="section-navigation js__section-navigation">
-				<ul>
-{% for row in rows %}
-  {%
+<div class="section-navigation js__section-navigation">
+	<ul>
+		{% for row in rows %}
+			{%
     set row_classes = [
       default_row_class ? 'views-row',
     ]
   %}
-  
-   	{{ rows }}
-  
-{% endfor %}
-		</ul>
-			</div>
+			{{ rows }}
+		{% endfor %}
+	</ul>
+</div>

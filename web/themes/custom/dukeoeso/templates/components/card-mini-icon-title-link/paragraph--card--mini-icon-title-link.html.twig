@@ -1,9 +1,33 @@
 <li>
-{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|render|striptags}}">
+	{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|render|striptags}}"
+class="
+  {% if 
+  ('.doc' in content.field_card_link.0['#url']|render|render) 
+  or ('.docx' in content.field_card_link.0['#url']|render|render)
+  or ('.docm' in content.field_card_link.0['#url']|render|render)
+  or ('.dot' in content.field_card_link.0['#url']|render|render)
+  or ('.dotm' in content.field_card_link.0['#url']|render|render)
+  or ('.dotx' in content.field_card_link.0['#url']|render|render)
+  %}
+  icon-doc
+  {% elseif 
+  ('.xlxm' in content.field_card_link.0['#url']|render|render) 
+  or ('.xlsx' in content.field_card_link.0['#url']|render|render) 
+  or ('.xlsb' in content.field_card_link.0['#url']|render|render) 
+  or ('.xltx' in content.field_card_link.0['#url']|render|render)
+  or  ('.xltm' in content.field_card_link.0['#url']|render|render)
+  or  ('.xls' in content.field_card_link.0['#url']|render|render)
+  or  ('.xlt' in content.field_card_link.0['#url']|render|render)
+  or  ('.xla' in content.field_card_link.0['#url']|render|render)
+   %}
+    icon-xl
+{% endif %}
+"
+    >
 			{%endif%}
-{{content.field_card_title}}
-{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-</a>
-{%endif%}
-</li>
+			{{content.field_card_title}}
+			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+			</a>
+			{%endif%}
+		</li>
