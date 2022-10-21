@@ -1,10 +1,17 @@
 /* Forms */
-.path-webform .container-1510 {
-  .form-section {
+.path-webform .container-1440 {
+  padding: 0 60px;
+
+  @include MQ(MQ-768) {
+    padding: 0 30px;
+  }
+  form {
     max-width: 660px;
     // padding: 0 30px;
     margin: 0 auto;
-
+h1{
+  margin-bottom: 40px;
+}
     label {
       font-size: 15px;
       font-style: normal;
@@ -129,6 +136,36 @@
 .form-item, .form-actions {
 
   text-align: left;
+}
+
+
+#captcha{
+  padding: 20px;
+  border: none;
+  summary{
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: normal;
+    color: #00539b;
+  }
+  .details-description{
+    font-family: "Open Sans",sans-serif;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+  }
+  .reload-captcha-wrapper a{
+    font-size: 19px;
+    line-height: 1.21;
+    font-weight: normal !important;
+    display: inline-block !important;
+    letter-spacing: normal;
+    color: #e0750b !important;
+    background: url(../images/Icon-arrow-forward.png) no-repeat center right/9px;
+    padding-right: 18px;
+  }
 }
 }
 
