@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% block content %}
+	<li class="{% if paragraph.field_nav_doc_secondary.isEmpty() == FALSE %} has-sub {% endif %}">
+		{% if paragraph.field_nav_doc_secondary.isEmpty() == FALSE %}
+			<a>
+				{{ content.field_nav_doc_primary_menu_item.0['#title'] }}
+			</a>
+			{%else%}
+			<a class="primary-item" href="{{ content.field_nav_doc_primary_menu_item.0['#url'] }}">{{ content.field_nav_doc_primary_menu_item.0['#title'] }}</a>
+		{% endif %}
+
+		{% if paragraph.field_nav_doc_secondary.isEmpty() == FALSE %}
+      <ul class="submenu">
+				{{content.field_nav_doc_secondary	}}
+			</ul>
+		{% endif %}
+	</li>
+{% endblock %}
+

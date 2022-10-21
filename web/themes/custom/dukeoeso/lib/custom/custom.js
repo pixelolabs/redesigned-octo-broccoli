@@ -20,7 +20,8 @@ if( $(".js__top-alert-notification").html()==undefined) {
       $(".js__section-navigation").toggleClass("active");
     }
   })
-  $(".js__section-navigation").children("ul").children("li").children("a").on("click", function () {
+  $(".js__section-navigation").children("ul").children("div").children("div").children("li").children("a").on("click", function () {
+    console.log("check");
     if($(this).parent("li").children(".submenu").css("display")=="none")
     {
       $(this).addClass("active")
@@ -36,7 +37,7 @@ if( $(".js__top-alert-notification").html()==undefined) {
 
  
 
-  $(".js__section-navigation").children("ul").children("li").children("a").keypress(function(e){
+  $(".js__section-navigation").children("ul").children("div").children("div").children("li").children("a").keypress(function(e){
     if(e.which == 13){
       if($(this).parent("li").children(".submenu").css("display")=="none")
       {
