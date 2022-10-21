@@ -121,7 +121,7 @@
         }
       }
       >ul {
-        >div >div >li {
+        >li {
           border-bottom: 2px solid $color-blue2;
           >a {
             font-size: 16px;
@@ -177,11 +177,10 @@
         background: rgba(224, 117, 11, 0.15);
         border-top: 2px solid $color-blue2;
         li {
-         
-        
+
           a {
-            font-size: 14px;
             margin-bottom: 10px;
+            font-size: 14px;
             font-weight: normal;
             color: $color-blue2;
             line-height: normal;
@@ -200,9 +199,10 @@
               content: '';
               position: absolute;
             }
-            &:last-child {
-              margin-bottom: 0;
-            }
+                      
+          &:last-child {
+            margin-bottom: 0;
+          }
           }
         }
       }

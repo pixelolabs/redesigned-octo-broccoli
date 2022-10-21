@@ -31,24 +31,16 @@
  */
 #}
 
-
-{% if rows %}
-{{ title_prefix }}
 {% if title %}
-	{{ title }}
+  {# <h3>{{ title }}</h3> #}
 {% endif %}
-{{ title_suffix }}
-
-{% if header %}
-	{{ header }}
-{% endif %}
-
-
-
-{% if rows %}
-	{{ rows }}
-{% elseif empty %}
-	{{ empty }}
-{% endif %}
-
-{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  
+   	{{ rows }}
+  
+{% endfor %}
