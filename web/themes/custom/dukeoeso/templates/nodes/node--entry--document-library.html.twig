@@ -1,6 +1,11 @@
 {{content.field_para}}
 <div class="custom-view">
-{{ drupal_view('block_document_media', 'block_1',node.id) }}
+<div class="three-column-pdf-list">
+	<div class="container-1680">
+		<h2 class="h2-34">{{content.field_generic_section_title_doc}}</h2>
+		{{ drupal_view('block_document_media', 'block_1',node.id) }}
+	</div>
+</div>
 </div>
 
 {# 

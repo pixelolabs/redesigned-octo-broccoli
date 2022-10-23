@@ -49,7 +49,7 @@
 {% endif %}
 {# Note that this needs to be rendered even when there aren't search results, so rendering it outside of the rows section. #}
 {# {{ drupal_block('views_exposed_filter_block:blog_content_search-page_1', {'label_display': 'hidden'}) }} #}
-	<div class="three-column-pdf-list"> <div class="container-1680">
+	
 		<h2 class="h2-34">{% if header %}
 	{{ header }}
 {% endif %}</h2>
@@ -60,8 +60,7 @@
 				{{ empty }}
 			{% endif %}
 		</ul>
-	</div>
-</div>
+
 {% if pager %}
 	{{ pager }}
 {% endif %}

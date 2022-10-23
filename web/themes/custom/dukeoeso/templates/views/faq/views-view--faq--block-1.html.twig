@@ -51,8 +51,7 @@
 {% endif %}
 {# Note that this needs to be rendered even when there aren't search results, so rendering it outside of the rows section. #}
 {# {{ drupal_block('views_exposed_filter_block:blog_content_search-page_1', {'label_display': 'hidden'}) }} #}
-<div class="faq-accordian">
-		<div class="container-885">
+
     <ul class="js__accordian">
 {% if rows %}
 	{{ rows }}
@@ -60,7 +59,7 @@
 	{{ empty }}
 {% endif %}
 
-</ul></div></div>
+</ul>
 
 {% if pager %}
 	{{ pager }}

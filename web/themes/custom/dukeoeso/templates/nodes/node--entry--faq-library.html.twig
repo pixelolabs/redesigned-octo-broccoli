@@ -4,6 +4,10 @@
 {# {{content.field_content.entity.tid.value}} #}
 {{content.field_paragraph}}
 <div class="custom-view">
-{{ drupal_view('block_document_media', 'block_1',node.id) }}
-{{ drupal_view('faq', 'block_1',node.id) }}
+<div class="faq-accordian">
+	<div class="container-885">
+  <h2 class="h2-34">{{content.field_generic_section_title_faq}}</h2>
+		{{ drupal_view('faq', 'block_1',node.id) }}
+	</div>
+</div>
 </div>
