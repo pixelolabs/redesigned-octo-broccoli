@@ -139,34 +139,42 @@ h1{
 }
 
 
+/* Recaptcha*/
 #captcha{
-  padding: 20px;
+  padding: 20px 0;
   border: none;
+  text-align: left;
   summary{
     font-size: 21px;
     font-weight: bold;
     line-height: 1.1;
     letter-spacing: normal;
     color: #00539b;
+    padding: 0;
   }
-  .details-description{
-    font-family: "Open Sans",sans-serif;
-    font-size: 19px;
-    font-weight: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
+  .details-wrapper{
+    padding: 20px 0;
+    .details-description{
+      font-family: "Open Sans",sans-serif;
+      font-size: 19px;
+      font-weight: normal;
+      line-height: 1.21;
+      letter-spacing: normal;
+    }
+    .reload-captcha-wrapper a{
+      font-size: 19px;
+      line-height: 1.21;
+      font-weight: normal !important;
+      display: inline-block !important;
+      letter-spacing: normal;
+      color: #e0750b !important;
+      background: url(../images/Icon-arrow-forward.png) no-repeat center right/9px;
+      padding-right: 18px;
+    }
   }
-  .reload-captcha-wrapper a{
-    font-size: 19px;
-    line-height: 1.21;
-    font-weight: normal !important;
-    display: inline-block !important;
-    letter-spacing: normal;
-    color: #e0750b !important;
-    background: url(../images/Icon-arrow-forward.png) no-repeat center right/9px;
-    padding-right: 18px;
-  }
+  
 }
+
 }
 
 input[type="text"]::-ms-clear {
