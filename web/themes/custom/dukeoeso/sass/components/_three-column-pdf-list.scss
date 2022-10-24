@@ -40,6 +40,16 @@
       span {
         background-image: none;
       }
+      max-width: 375px;
+      background: url(../images/icon-metro-file-pdf.svg) no-repeat top left/54px;
+      padding-left: 78px;
+      padding-top: 6px;
+      display: block;
+      font-size: 19px;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #00539b;
+      min-height: 63px;
 
       @include MQ(MQ-600) {
         a {
@@ -52,16 +62,10 @@
       }
 
       a {
-        max-width: 375px;
-        background: url(../images/icon-metro-file-pdf.svg) no-repeat top left / 54px;
-        padding-left: 78px;
-        padding-top: 6px;
         font-size: 19px;
-        display: block;
         line-height: normal;
         letter-spacing: normal;
-        color: $color-blue2;
-        min-height: 63px;
+        color: #00539b;
         &.icon-doc{
           background: url(../images/icon-simple-microsoftword.svg) no-repeat top left / 54px;
         }

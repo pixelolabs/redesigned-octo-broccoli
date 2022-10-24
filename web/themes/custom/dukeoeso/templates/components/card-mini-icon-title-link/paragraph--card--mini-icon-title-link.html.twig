@@ -1,25 +1,27 @@
 <li>
-	{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|render|striptags}}"
+{% set mediaURL = content.field_media_document|render|striptags|trim %}
+	{% if mediaURL is not empty %}
+
+		<a href="{{mediaURL}}" title="{{content.field_card_title|render|striptags|trim}}"
 class="
   {% if 
-  ('.doc' in content.field_card_link.0['#url']|render|render) 
-  or ('.docx' in content.field_card_link.0['#url']|render|render)
-  or ('.docm' in content.field_card_link.0['#url']|render|render)
-  or ('.dot' in content.field_card_link.0['#url']|render|render)
-  or ('.dotm' in content.field_card_link.0['#url']|render|render)
-  or ('.dotx' in content.field_card_link.0['#url']|render|render)
+  ('.doc' in mediaURL|render|render) 
+  or ('.docx' in mediaURL|render|render)
+  or ('.docm' in mediaURL|render|render)
+  or ('.dot' in mediaURL|render|render)
+  or ('.dotm' in mediaURL|render|render)
+  or ('.dotx' in mediaURL|render|render)
   %}
   icon-doc
   {% elseif 
-  ('.xlxm' in content.field_card_link.0['#url']|render|render) 
-  or ('.xlsx' in content.field_card_link.0['#url']|render|render) 
-  or ('.xlsb' in content.field_card_link.0['#url']|render|render) 
-  or ('.xltx' in content.field_card_link.0['#url']|render|render)
-  or  ('.xltm' in content.field_card_link.0['#url']|render|render)
-  or  ('.xls' in content.field_card_link.0['#url']|render|render)
-  or  ('.xlt' in content.field_card_link.0['#url']|render|render)
-  or  ('.xla' in content.field_card_link.0['#url']|render|render)
+  ('.xlxm' in mediaURL|render|render) 
+  or ('.xlsx' in mediaURL|render|render) 
+  or ('.xlsb' in mediaURL|render|render) 
+  or ('.xltx' in mediaURL|render|render)
+  or  ('.xltm' in mediaURL|render|render)
+  or  ('.xls' in mediaURL|render|render)
+  or  ('.xlt' in mediaURL|render|render)
+  or  ('.xla' in mediaURL|render|render)
    %}
     icon-xl
 {% endif %}
@@ -27,7 +29,7 @@ class="
     >
 			{%endif%}
 			{{content.field_card_title}}
-			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
+			{% if mediaURL.isEmpty() == FALSE %}
 			</a>
 			{%endif%}
 		</li>
