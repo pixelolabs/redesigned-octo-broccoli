@@ -236,4 +236,10 @@ jQuery(function () {
   } else {
     $(".three-column-pdf-list").css("padding-top", "0");
   }
+  /* Check if Sidebar Nav exists on the website, if not, then add padding to the top */
+  if ($(".region-sidebar .sidebar").length) {    
+} else {
+    $(".generic .paragraph:first-child").children('div').children('div').css("padding-top", "42px");
+ }
+
 });
