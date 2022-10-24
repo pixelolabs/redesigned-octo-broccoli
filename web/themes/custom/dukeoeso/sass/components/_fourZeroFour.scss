@@ -6,6 +6,9 @@
     h1{
         color: $color-blue2;
         text-align: center;
+        &::before{
+          left: unset !important;
+        }
     }
     p{
         margin-top: 20px;
