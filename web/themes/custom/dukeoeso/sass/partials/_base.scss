@@ -920,17 +920,25 @@ video{
 }
 
 /* Important USED ON PDP */
-.visually-hidden {
-  position: absolute !important;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
+// .visually-hidden {
+//   position: absolute !important;
+//   overflow: hidden;
+//   clip: rect(0 0 0 0);
+//   height: 1px;
+//   width: 1px;
+//   margin: -1px;
+//   padding: 0;
+//   border: 0;
+// }
 
+.skip-link
+{
+  overflow: visible;
+    z-index: 99999;
+    position: absolute;
+    background: #000;
+    color: white;
+}
 .visually-hidden--inline {
   margin: 0;
   height: 1em;
@@ -1101,4 +1109,9 @@ video{
 
 .generic{
   overflow: hidden;
+}
+
+.sr-item{
+  font-size: 0;
+  color: transparent;
 }

@@ -40,7 +40,7 @@
                   {% endif %}">
 					{% if menu_level == 0 %}
 						<div class="menu-wrapper">
-							<a class="primary-item" href="{{item.url}}">
+							<a class="primary-item" role="button" aria-haspopup="true" aria-expanded="false" href="{{item.url}}">
 								{{item.title}}
 							</a>
 						{% else %}
