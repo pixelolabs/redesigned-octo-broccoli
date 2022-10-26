@@ -49,7 +49,7 @@
 						{# If there are more levels #}
 						{% if item.below %}
 							<div class="sub-menu-wrapper">
-							<h4>{{item.title}}</h4>
+							<span>{{item.title}}</span>
 								<ul class="sub-menu">
 									{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
 								</ul>
