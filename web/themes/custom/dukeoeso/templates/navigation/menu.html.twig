@@ -44,7 +44,10 @@
 								{{item.title}}
 							</a>
 						{% else %}
-							{{ link(item.title, item.url) }}
+            		<a role="button"  href="{{item.url}}">
+								{{item.title}}
+							</a>
+							{# {{ link(item.title, item.url) }} #}
 						{% endif %}
 						{# If there are more levels #}
 						{% if item.below %}
