@@ -1,6 +1,7 @@
+{% set title = content.field_card_title|render|striptags|trim %}
 <li>
 	{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|render|striptags|trim}}">
+		<a href="{{content.field_card_link.0['#url']}}" title="{{title}}">
 			{%endif%}
 		<div>	<b>{{content.field_card_title}}</b></div>
 			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}

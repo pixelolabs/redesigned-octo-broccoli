@@ -17,37 +17,37 @@ jQuery(function () {
     }
   });
   /* Top Nav - Key Press - First Level Click */
-  $(".js__section-navigation")
-    .children("ul")
-    .children("li")
-    .children("a")
-    .on("click", function () {
-      if ($(this).parent("li").children(".submenu").css("display") == "none") {
-        $(this).addClass("active");
-        $(this).parent("li").children(".submenu").slideDown();
-      } else {
-        $(this).removeClass("active");
-        $(this).parent("li").children(".submenu").slideUp();
-      }
-    });
+  // $(".js__section-navigation")
+  //   .children("ul")
+  //   .children("li")
+  //   .children("a")
+  //   .on("click", function () {
+  //     if ($(this).parent("li").children(".submenu").css("display") == "none") {
+  //       $(this).addClass("active");
+  //       $(this).parent("li").children(".submenu").slideDown();
+  //     } else {
+  //       $(this).removeClass("active");
+  //       $(this).parent("li").children(".submenu").slideUp();
+  //     }
+  //   });
 /* -- */
-  $(".js__section-navigation")
-    .children("ul")
-    .children("li")
-    .children("a")
-    .keypress(function (e) {
-      if (e.which == 13) {
-        if (
-          $(this).parent("li").children(".submenu").css("display") == "none"
-        ) {
-          $(this).addClass("active");
-          $(this).parent("li").children(".submenu").slideDown();
-        } else {
-          $(this).removeClass("active");
-          $(this).parent("li").children(".submenu").slideUp();
-        }
-      }
-    });
+  // $(".js__section-navigation")
+  //   .children("ul")
+  //   .children("li")
+  //   .children("a")
+  //   .keypress(function (e) {
+  //     if (e.which == 13) {
+  //       if (
+  //         $(this).parent("li").children(".submenu").css("display") == "none"
+  //       ) {
+  //         $(this).addClass("active");
+  //         $(this).parent("li").children(".submenu").slideDown();
+  //       } else {
+  //         $(this).removeClass("active");
+  //         $(this).parent("li").children(".submenu").slideUp();
+  //       }
+  //     }
+  //   });
   /* SLIDER */
 
   var heroSlider = new Swiper(".js__hero-banner-slider", {
@@ -198,8 +198,8 @@ jQuery(function () {
   /*Keyboard tabbing*/
   /*Adding Tab index*/
   $("a").attr("tabindex", "0");
-  $(".js__header-has-sub").find(".primary-item").removeAttr("tabindex");
-  $(".js__header-has-sub").attr("tabindex", "0");
+  // $(".js__header-has-sub").find(".primary-item").removeAttr("tabindex");
+  // $(".js__header-has-sub").attr("tabindex", "0");
   /* Desktop - Key Press - Enter - Sub Nav Open  */
   if ($(window).width() > 980) {
     $(".js__header-has-sub").keypress(function (e) {

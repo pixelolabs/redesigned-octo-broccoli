@@ -19,6 +19,10 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    a{
+      display: block;
+      height: 100%;
+     }
   }
   .logo-section-small {
     width: 80px;

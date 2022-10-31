@@ -1,8 +1,9 @@
+{% set title = content.field_card_title|render|striptags|trim %}
 <li>
 {% set mediaURL = content.field_media_document|render|striptags|trim %}
 	{% if mediaURL is not empty %}
 
-		<a href="{{mediaURL}}" title="{{content.field_card_title|render|striptags|trim}}"
+		<a href="{{mediaURL}}" title="{{title}}"
 class="
   {% if 
   ('.doc' in mediaURL|render|render) 

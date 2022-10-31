@@ -1,16 +1,16 @@
+{% set title = content.field_card_title|render|striptags|trim %}
 <li>
 	{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-		<a href="{{content.field_card_link.0['#url']}}" title="{{content.field_card_title|render|striptags|trim}}">
+		<a href="{{content.field_card_link.0['#url']}}">
 			{%endif%}
 			<div class="image-section">
 				{{content.field_media_img}}
 			</div>
 			<div class="content">
-				<span>{{content.field_card_title}}</span>
+				<h6>{{content.field_card_title}}</h6>
 				<p>{{content.field_card_content}}</p>
 			</div>
 			{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
 			</a>
 			{%endif%}
 		</li>
-

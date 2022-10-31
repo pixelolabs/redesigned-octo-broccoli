@@ -40,13 +40,20 @@ header {
         font-size: 15px;
       }
     }
+    a{
+      display: block;
+      height: 100%;
+    }
   }
   .logo-section {
     width: 687px;
     height: 59px;
     flex: none;
     position: relative;
-   
+   a{
+    display: block;
+    height: 100%;
+   }
     img {
       @include img-object-contain
     }

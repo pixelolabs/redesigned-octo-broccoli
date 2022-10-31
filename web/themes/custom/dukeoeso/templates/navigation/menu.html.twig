@@ -35,12 +35,12 @@
 				{# Do nothing #}
 			{% endif %}
 			{% for item in items %}
-				<li{{item.attributes}} class=" {% if item.below %}
+				<li{{item.attributes}}  class=" {% if item.below %}
                   has-sub js__header-has-sub
                   {% endif %}">
 					{% if menu_level == 0 %}
 						<div class="menu-wrapper">
-							<a class="primary-item" role="button" aria-haspopup="true" aria-expanded="false" href="{{item.url}}">
+							<a class="primary-item" role="button" aria-haspopup="true" aria-expanded="false">
 								{{item.title}}
 							</a>
 						{% else %}

@@ -1,3 +1,4 @@
+{% set title = content.field_card_link.0['#title']|render|striptags|trim %}
 <li>
 	<div class="image-section">
 		{{content.field_media_img}}
@@ -7,7 +8,7 @@
 		<p>
 			{{content.field_card_content}}</p>
 		{% if content.field_card_link.0['#url'].isEmpty() == FALSE %}
-			<a href='{{content.field_card_link.0['#url']}}' title="{{content.field_card_title|render|striptags|trim}}" class="btn--primary">{{content.field_card_link.0['#title']}}</a>
+			<a href='{{content.field_card_link.0['#url']}}' title="{{title}}" class="btn--primary">{{content.field_card_link.0['#title']}}</a>
 			{%endif%}
 		</div>
 	</li>
