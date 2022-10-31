@@ -16,6 +16,7 @@ jQuery(function () {
       $(".js__section-navigation").toggleClass("active");
     }
   });
+  /* Top Nav - Key Press - First Level Click */
   $(".js__section-navigation")
     .children("ul")
     .children("li")
@@ -29,7 +30,7 @@ jQuery(function () {
         $(this).parent("li").children(".submenu").slideUp();
       }
     });
-
+/* -- */
   $(".js__section-navigation")
     .children("ul")
     .children("li")
@@ -62,6 +63,7 @@ jQuery(function () {
     },
   });
 
+  /* Sticky Nav on Scroll */
   $(window).scroll(function () {
     var sticky = $(".js__main-header"),
       scroll = $(window).scrollTop();
@@ -75,8 +77,9 @@ jQuery(function () {
     }
   });
 
+  
+  /*Accrodians */
   $(".js__accordian").children("li:first-child").addClass("active");
-  /*Accrodian*/
   $(".js__accordian")
     .children("li")
     .children("h5,h6,h3")
@@ -136,16 +139,18 @@ jQuery(function () {
     });
 
   /*Header*/
+  
+  /* Hamburger click */
   $(".js__mobile-hamburger").on("click", function () {
     $(".js__menu-section").addClass("active");
     $(".js__menu-section").removeClass("inactive");
   });
-
+  /* Mobile Menu Close */
   $(".js__mobilemenu-close").on("click", function () {
     $(".js__menu-section").removeClass("active");
     $(".js__menu-section").addClass("inactive");
   });
-
+  /* Mobile Sub Nav - Click - open sub navs */
   $(".js__header-has-sub")
     .children(".menu-wrapper")
     .children("a")
@@ -180,8 +185,7 @@ jQuery(function () {
     $(".js__top-alert-notification").addClass("alert-hide");
   });
 
-  /*active link while submenu open */
-
+  /* Desktop - Mouse Hover - open the sub menu */
   if ($(window).width() > 980) {
     $(".js__header-has-sub").mouseover(function () {
       $(this).addClass("active");
@@ -194,13 +198,16 @@ jQuery(function () {
   /*Keyboard tabbing*/
   /*Adding Tab index*/
   $("a").attr("tabindex", "0");
-
   $(".js__header-has-sub").find(".primary-item").removeAttr("tabindex");
   $(".js__header-has-sub").attr("tabindex", "0");
+  /* Desktop - Key Press - Enter - Sub Nav Open  */
   if ($(window).width() > 980) {
-    $(".js__header-has-sub").focus(function () {
-      $(".js__header-has-sub").removeClass("active");
-      $(this).addClass("active");
+    $(".js__header-has-sub").keypress(function (e) {
+      if (e.which == 13) {
+        $(".js__header-has-sub").removeClass("active");
+        $(this).addClass("active");
+      }
+      
     });
     $(".primary-item").focus(function () {
       $(".js__header-has-sub").removeClass("active");
@@ -214,14 +221,20 @@ jQuery(function () {
     });
   }
 
-  $(".js__mobile-hamburger").focus(function () {
-    $(".js__menu-section").addClass("active");
-    $(".js__menu-section").removeClass("inactive");
+  $(".js__mobile-hamburger").keypress(function (e) {
+    if (e.which == 13) {
+      $(".js__menu-section").addClass("active");
+      $(".js__menu-section").removeClass("inactive");  
+    }
+    
   });
 
-  $(".js__mobilemenu-close").focus(function () {
-    $(".js__menu-section").removeClass("active");
-    $(".js__menu-section").addClass("inactive");
+  $(".js__mobilemenu-close").keypress(function (e) {
+    if (e.which == 13) {
+      $(".js__menu-section").removeClass("active");
+      $(".js__menu-section").addClass("inactive");
+    }
+    
   });
 
   $(".js__accordian").children("li").children("h6").attr("tabindex", "0");

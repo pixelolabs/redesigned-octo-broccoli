@@ -136,6 +136,7 @@
         top: -12px;
         background-color: $color-blue2;
       }
+      a:focus-visible .content{outline: 2px solid #FFD960 !important;}
     }
   }
 
