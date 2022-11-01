@@ -16,38 +16,38 @@ jQuery(function () {
       $(".js__section-navigation").toggleClass("active");
     }
   });
-  /* Top Nav - Key Press - First Level Click */
-  // $(".js__section-navigation")
-  //   .children("ul")
-  //   .children("li")
-  //   .children("a")
-  //   .on("click", function () {
-  //     if ($(this).parent("li").children(".submenu").css("display") == "none") {
-  //       $(this).addClass("active");
-  //       $(this).parent("li").children(".submenu").slideDown();
-  //     } else {
-  //       $(this).removeClass("active");
-  //       $(this).parent("li").children(".submenu").slideUp();
-  //     }
-  //   });
+  /* Left Side Bar Navigation Click */
+  $(".js__section-navigation")
+    .children("ul")
+    .children("li")
+    .children("a")
+    .on("click", function () {
+      if ($(this).parent("li").children(".submenu").css("display") == "none") {
+        $(this).addClass("active");
+        $(this).parent("li").children(".submenu").slideDown();
+      } else {
+        $(this).removeClass("active");
+        $(this).parent("li").children(".submenu").slideUp();
+      }
+    });
 /* -- */
-  // $(".js__section-navigation")
-  //   .children("ul")
-  //   .children("li")
-  //   .children("a")
-  //   .keypress(function (e) {
-  //     if (e.which == 13) {
-  //       if (
-  //         $(this).parent("li").children(".submenu").css("display") == "none"
-  //       ) {
-  //         $(this).addClass("active");
-  //         $(this).parent("li").children(".submenu").slideDown();
-  //       } else {
-  //         $(this).removeClass("active");
-  //         $(this).parent("li").children(".submenu").slideUp();
-  //       }
-  //     }
-  //   });
+  $(".js__section-navigation")
+    .children("ul")
+    .children("li")
+    .children("a")
+    .keypress(function (e) {
+      if (e.which == 13) {
+        if (
+          $(this).parent("li").children(".submenu").css("display") == "none"
+        ) {
+          $(this).addClass("active");
+          $(this).parent("li").children(".submenu").slideDown();
+        } else {
+          $(this).removeClass("active");
+          $(this).parent("li").children(".submenu").slideUp();
+        }
+      }
+    });
   /* SLIDER */
 
   var heroSlider = new Swiper(".js__hero-banner-slider", {
